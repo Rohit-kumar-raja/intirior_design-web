@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-md-12">
-                        <div class="animate-box text-center text-md-start">
+                        <div class="animate-box text-center text-md-start mt-5">
                             <div class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown">
                             <div class="sec-title text-center">
                     <p>To Do good design</p>

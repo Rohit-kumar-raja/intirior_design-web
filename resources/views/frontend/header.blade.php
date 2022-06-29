@@ -1,4 +1,4 @@
-
+@include('frontend.feedback')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,20 +100,20 @@
                         <li class="dropdown current"><a href="{{url('/')}}">Home</a>
                             
                         </li>
-                        <li class="dropdown"><a href="">How it works</a>
+                        <li class="dropdown"><a href="{{url('/about')}}">How it works</a>
                             <ul>
                                 <li><a href="{{url('/about')}}">About Company</a></li>
                                 <!-- <li><a href="faq.php">FAQ’s</a></li> -->
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="">Services</a>
+                        <li class="dropdown"><a href="{{url('/services')}}">Services</a>
                         <ul>
                                 <li><a href="{{url('/services')}}">Services</a></li>
-                                <li><a href="services_single.php">Services Single</a></li>
+                                <li><a href="{{url('/single')}}">Services Single</a></li>
                             </ul>
                     </li>
 
-                        <li><a href="">Offering</a></li>
+                        <li><a href="{{url('/offering')}}">Offering</a></li>
 
                         <li><a href="{{url('/contact')}}">Contact</a></li>
                         <li><a href="#loginModal3" data-toggle="modal">Login / Signup</a></li>

@@ -8,7 +8,7 @@ use App\Http\Controllers\frontend\ServicesController;
 use App\Http\Controllers\frontend\ServicessingleController;
 use App\Http\Controllers\frontend\HowitworksController;
 use App\Http\Controllers\frontend\LoginController;
-use App\Http\Controllers\frontend\WorkprocessController;
+use App\Http\Controllers\frontend\OfferingController;
 
 
 /*
@@ -31,4 +31,4 @@ Route::get('about',[AboutController::class,'index']);
 Route::get('contact',[ContactController::class,'index']);
 Route::get('services',[ServicesController::class,'index']);
 Route::get('single',[ServicessingleController::class,'index']);
-Route::get('workprocess',[WorkprocessController::class,'index']);
+Route::get('offering',[OfferingController::class,'index']);

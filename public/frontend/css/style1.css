@@ -70,3 +70,12 @@
     padding-bottom:5px!important;
     padding-top:20px!important;
 }
+.sp-12
+{
+    width:1200px!important;
+}
+
+.blog-single-image-with-text-box .image-box li img {
+    width: 500px !important;
+    height: 500px !important;
+}

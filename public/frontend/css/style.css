@@ -306,6 +306,43 @@
                 text-transform: uppercase;
                 font-family: 'Poppins', sans-serif;
             }
+
+            .recently-project-style2-area .container p {
+                color: #2e3093;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin: 0 0 7px;
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+            }
+            
+            .recently-project-style2-area .container .title {
+                position: relative;
+                display: block;
+                color: #27282c;
+                font-size: 36px;
+                text-align: center;
+                line-height: 44px;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            
+            
+            .blog-post .single-blog-post .title {
+                position: relative;
+                display: block;
+                color: #27282c;
+                font-size: 36px;
+                text-align: center;
+                line-height: 44px;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+            }
             
             .sec-title .title.clr-white {
                 color: #ffffff;
@@ -4691,7 +4728,7 @@
                 background-size: cover;
                 background-position: center top;
                 background-repeat: no-repeat;
-                padding: 102px 0 110px;
+                padding: 102px 0 50px;
                 z-index: 1;
             }
             
@@ -4726,7 +4763,7 @@
             
             .slogan-style2-area .inner-content .title {
                 display: block;
-                padding-bottom: 40px;
+                /* padding-bottom: 40px; */
             }
             
             .slogan-style2-area .inner-content .title h1 {
@@ -4931,13 +4968,13 @@
                 width: 100%;
                 height: 100%;
                 content: "";
-                background: #ed4d58;
+                background: #fff;
                 border-radius: 50%;
                 z-index: -1;
             }
             
             .why-choose-content .single-box .icon-holder span:before {
-                color: #ffffff;
+                color: #2e3093;
                 font-size: 50px;
                 line-height: 50px;
             }
@@ -4996,7 +5033,7 @@
             .recently-project-style2-area {
                 position: relative;
                 display: block;
-                padding: 110px 0 108px;
+                padding: 50px 0 108px;
             }
             
             .single-project-style2 {
@@ -6627,16 +6664,16 @@
                 position: relative;
                 display: block;
                 padding-top: 50px;
-                padding-bottom: 50px;
+                /* padding-bottom: 50px; */
             }
             
             .about-style3-content .sec-title {
-                padding-bottom: 40px;
+                /* padding-bottom: 40px; */
                 margin: 0;
             }
             
             .about-style3-content .sec-title p {
-                margin: 15px 0 27px;
+                margin: 15px 0 15px;
             }
             
             .about-style3-content .button {}
@@ -8379,7 +8416,7 @@
             .single-service-top .text {
                 position: relative;
                 display: block;
-                padding-top: 41px;
+                padding-top: 90px;
                 padding-bottom: 26px;
             }
             
@@ -8405,7 +8442,7 @@
             .single-advantages-box {
                 position: relative;
                 display: block;
-                border: 1px solid #ededed;
+                border: 2px solid #2e3093;
                 text-align: center;
                 transition: all 700ms ease 500ms;
             }
@@ -9989,8 +10026,8 @@
             .project-description-area {
                 position: relative;
                 display: block;
-                margin-top: 110px;
-                padding: 110px 0 50px;
+                /* margin-top: 70px; */
+                padding: 30px 0 50px;
             }
             
             .project-description-area .pattern-bg {
@@ -11113,7 +11150,7 @@
             .blog-single-area .main-image-box {
                 position: relative;
                 display: block;
-                margin-bottom: 54px;
+                /* margin-bottom: 54px; */
             }
             
             .blog-single-area .main-image-box img {
@@ -11196,7 +11233,7 @@
             .blog-single-image-with-text-box {
                 position: relative;
                 display: block;
-                margin-top: 52px;
+                margin-top: 30px;
             }
             
             .blog-single-image-with-text-box .image-box {
@@ -11228,7 +11265,7 @@
             .blog-single-bottom-content-box {
                 position: relative;
                 display: block;
-                margin-top: 45px;
+                /* margin-top: 45px; */
             }
             
             .blog-single-bottom-content-box h2 {

@@ -1,7 +1,6 @@
-        <?php //        include "header.php";        ?>
-        @extends('frontend.main')
-        @section('main-container')
-        
+@extends('frontend.main')
+@section('main-container')
+
         <!--Start breadcrumb area-->
         <section class="breadcrumb-area" style="background-image: url({{url('frontend/images/resources/breadcrumb-bg.jpg')}});">
             <div class="container">
@@ -35,7 +34,7 @@
                                 <div class="title">Modern & Luxury<br> <span>Interior Designers in Jamshedpur</span></div>
                             </div>
                             <div class="text">
-                                <p>With Togo Team, it possible for anyone to renovate and design a home – from homeowners to professionals. It provides valuable insights to people who have no experience in design. We feel that interior design is one of the most important investments you will ever make. Whether your needs are Residential or Commercial Interior Design or Model Home Merchandising, our commitment to your project.</p>
+                                <p>With Pesante, it possible for anyone to renovate and design a home – from homeowners to professionals. It provides valuable insights to people who have no experience in design. We feel that interior design is one of the most important investments you will ever make. Whether your needs are Residential or Commercial Interior Design or Model Home Merchandising, our commitment to your project.</p>
                             </div>
                         </div>
                     </div>
@@ -57,7 +56,7 @@
                                                 <h3>1983</h3>
                                             </div>
                                             <div class="title">
-                                                <h3>Togo Team Was Founded by<br> Kamlesh in Jamshedpur.</h3>
+                                                <h3>Pesante Was Founded by<br> Kamlesh in Jamshedpur.</h3>
                                             </div>
                                             <div class="text">
                                                 <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
@@ -66,12 +65,98 @@
                                     </div>
                                 </div>
                                 <!--End Single History Content-->
-                                
+                                <!--Start Single History Content-->
+                                <div class="single-history-content">
+                                    <div class="img-box">
+                                        <div class="inner">
+                                            <img src="{{url('frontend/images/resources/history-2.jpg')}}" alt="Awesome Image">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="inner">
+                                            <div class="date">
+                                                <h3>1984</h3>
+                                            </div>
+                                            <div class="title">
+                                                <h3>Pesante Was Founded by<br> Kamlesh in Jamshedpur.</h3>
+                                            </div>
+                                            <div class="text">
+                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Single History Content-->
+                                <!--Start Single History Content-->
+                                <div class="single-history-content">
+                                    <div class="img-box">
+                                        <div class="inner">
+                                            <img src="{{url('frontend/images/resources/history-1.jpg')}}" alt="Awesome Image">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="inner">
+                                            <div class="date">
+                                                <h3>1985</h3>
+                                            </div>
+                                            <div class="title">
+                                                <h3>Pesante Was Founded by<br> Kamlesh in Jamshedpur.</h3>
+                                            </div>
+                                            <div class="text">
+                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Single History Content-->
+                                <!--Start Single History Content-->
+                                <div class="single-history-content">
+                                    <div class="img-box">
+                                        <div class="inner">
+                                            <img src="{{url('frontend/images/resources/history-2.jpg')}}" alt="Awesome Image">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="inner">
+                                            <div class="date">
+                                                <h3>1986</h3>
+                                            </div>
+                                            <div class="title">
+                                                <h3>Pesante Was Founded by<br> Kamlesh in Jamshedpur.</h3>
+                                            </div>
+                                            <div class="text">
+                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Single History Content-->
+                                <!--Start Single History Content-->
+                                <div class="single-history-content">
+                                    <div class="img-box">
+                                        <div class="inner">
+                                            <img src="{{url('frontend/images/resources/history-2.jpg')}}" alt="Awesome Image">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="inner">
+                                            <div class="date">
+                                                <h3>1987</h3>
+                                            </div>
+                                            <div class="title">
+                                                <h3>Pesante Was Founded by<br> Kamlesh in Jamshedpur.</h3>
+                                            </div>
+                                            <div class="text">
+                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Single History Content-->
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="row fact-counter">
                     <!--Start Single Fact Counter-->
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
@@ -239,8 +324,7 @@
      
 
         <?php //include "footer.php"; ?>
-        @endsection
-        
+        @endsection 
 </body>
 
 

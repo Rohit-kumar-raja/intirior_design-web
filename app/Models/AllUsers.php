@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class AllUsers extends Model
 {
     use HasFactory;
+    protected $table = 'all_users';
+    protected $filable = ['name','email','phone','images','city','status'];
 }

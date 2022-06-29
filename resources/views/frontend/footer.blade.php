@@ -47,12 +47,12 @@
                     </div>
                     <div class="usefull-links">
                         <ul class="cen">
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="services.php">Services</a></li>
-                            <li><a href="">Offering</a></li>
+                            <li><a href="{{url('/about')}}">About Us</a></li>
+                            <li><a href="{{url('/services')}}">Services</a></li>
+                            <li><a href="{{url('/offering')}}">Offering</a></li>
                             <!-- <li><a href="gallery.php">Gallery</a></li> -->
-                            <li><a href="contact.php">Contact Us</a></li>
-                            <li><a href="privacy_policy.php">Privacy Policy</a></li>
+                            <li><a href="{{url('/contact')}}">Contact Us</a></li>
+                            {{-- <li><a href="privacy_policy.php">Privacy Policy</a></li> --}}
                         </ul>
 
                     </div>

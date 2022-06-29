@@ -304,9 +304,9 @@ h3+img {
     }
 }
 
-.container+.container {
+/* .container+.container {
     margin-top: 35px;
-}
+} */
 
 .row+.row {
     margin-top: 35px;
@@ -316,9 +316,9 @@ h3+img {
     *+.rd-form {
         margin-top: 30px;
     }
-    .container+.container {
+    /* .container+.container {
         margin-top: 60px;
-    }
+    } */
     .row+.row {
         margin-top: 60px;
     }
