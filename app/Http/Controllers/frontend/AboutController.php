@@ -10,7 +10,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-       $about = About::all();
-       return view ('frontend.about', compact('about')); 
+       $about = About::where('status','1')->get();
+       return view ('frontend.about', ['about'=>$about]); 
     }
 }

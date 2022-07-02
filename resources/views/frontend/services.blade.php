@@ -24,152 +24,44 @@
         </section>
         <!--End breadcrumb area-->
 
-        
-
-<!--Start services style2 Service Page-->
-        
-        <!--End services style2 Service Page-->
-
-        <!--Start services style1 service page-->
-        <section class="services-style1-service-page">
+        {{-- category1 section starts here --}}
+         <!--Start Recently Project style2 Area-->
+         <section class="recently-project-style2-area">
             <div class="container">
-                <div class="sec-title text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p>Interior Elements</p>
-                    <div class="title">Our Special <span>Services</span></div>
+                <div class="sec-title text-center">
+                    <p>Categories</p>
+                    <div class="title">Services <span>Categories</span></div>
                 </div>
                 <div class="row">
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="{{url('frontend/images/services/1.jpg')}}" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                            </div>
-                            <div class="text-holder bg-white">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-lamp"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>01</h1>
-                                        </div>
+                    <div class="col-xl-12">
+                        <div class="project-carousel-v2 owl-carousel owl-theme">
+                            <!--Start single project style1-->
+                            @foreach ($cat as $category)
+                                
+                            <div class="single-project-style2">
+                                <div class="img-holder">
+                                    <img src="{{env('APP_URL2').'/category/'.$category->images}}" alt="Awesome Image">
+                                    <div class="read-more">
+                                        <a href="#"><span class="icon-next"></span></a>
                                     </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Lighting</h3>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                    <div class="title-box">
+                                        {{-- <span>Modern Design</span> --}}
+                                        <h3>{{$category->name}}</h3>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
+                            <!--End single project style1-->
+                           
                         </div>
                     </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="{{url('frontend/images/services/2.jpg')}}" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                            </div>
-                            <div class="text-holder bg-white">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-paint"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>02</h1>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Coloring</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="{{url('frontend/images/services/3.jpg')}}" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                            </div>
-                            <div class="text-holder bg-white">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-floor"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>03</h1>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Patterns</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="{{url('frontend/images/services/4.jpg')}}" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                            </div>
-                            <div class="text-holder bg-white">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-window"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>04</h1>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Textures</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style1-->
                 </div>
             </div>
-        </section><!--Start services style2 Service Page-->
+        </section>
+        <!--End Recently Project style2 Area-->
+        {{-- category1 section ends here --}}
+
+        <!--Start services style2 Service Page-->
         <section class="services-style2-service-page">
             <div class="container">
                 <div class="row">
@@ -318,7 +210,147 @@
         </section>
         <!--End services style2 Service Page-->
 
-
+        <!--Start special services section here -->
+        <section class="services-style1-service-page">
+            <div class="container">
+                <div class="sec-title text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
+                    <p>Interior Elements</p>
+                    <div class="title">Our Special <span>Services</span></div>
+                </div>
+                <div class="row">
+                    <!--Start single service style1-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
+                            <div class="img-holder">
+                                <img src="{{url('frontend/images/services/1.jpg')}}" alt="Awesome Image">
+                                <div class="overlay-style-two"></div>
+                            </div>
+                            <div class="text-holder bg-white">
+                                <div class="inner-content">
+                                    <div class="top">
+                                        <div class="icon">
+                                            <span class="icon-lamp"></span>
+                                        </div>
+                                        <div class="count">
+                                            <h1>01</h1>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="title">
+                                            <h3>Lighting</h3>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="text">
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single service style1-->
+                    <!--Start single service style1-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
+                            <div class="img-holder">
+                                <img src="{{url('frontend/images/services/2.jpg')}}" alt="Awesome Image">
+                                <div class="overlay-style-two"></div>
+                            </div>
+                            <div class="text-holder bg-white">
+                                <div class="inner-content">
+                                    <div class="top">
+                                        <div class="icon">
+                                            <span class="icon-paint"></span>
+                                        </div>
+                                        <div class="count">
+                                            <h1>02</h1>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="title">
+                                            <h3>Coloring</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="text">
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single service style1-->
+                    <!--Start single service style1-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1200ms">
+                            <div class="img-holder">
+                                <img src="{{url('frontend/images/services/3.jpg')}}" alt="Awesome Image">
+                                <div class="overlay-style-two"></div>
+                            </div>
+                            <div class="text-holder bg-white">
+                                <div class="inner-content">
+                                    <div class="top">
+                                        <div class="icon">
+                                            <span class="icon-floor"></span>
+                                        </div>
+                                        <div class="count">
+                                            <h1>03</h1>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="title">
+                                            <h3>Patterns</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="text">
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single service style1-->
+                    <!--Start single service style1-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
+                            <div class="img-holder">
+                                <img src="{{url('frontend/images/services/4.jpg')}}" alt="Awesome Image">
+                                <div class="overlay-style-two"></div>
+                            </div>
+                            <div class="text-holder bg-white">
+                                <div class="inner-content">
+                                    <div class="top">
+                                        <div class="icon">
+                                            <span class="icon-window"></span>
+                                        </div>
+                                        <div class="count">
+                                            <h1>04</h1>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="title">
+                                            <h3>Textures</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="text">
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single service style1-->
+                </div>
+            </div>
+        </section>
+        {{-- end special service section here --}}
         <!--End services style1 service page-->
         <section class="working-process-area">
             <div class="container">

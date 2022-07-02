@@ -1,9 +1,9 @@
 
     <div class="container-fluid">
         <section class="bg-default section-decoration-4">
-            <div class="decoration-img">
+            {{-- <div class="decoration-img">
                 <img src="https://livedemo00.template-help.com/wt_prod-23868/images/section-decorate-img-3.png" alt="" />
-            </div>
+            </div> --}}
             <div class="container">
                 <div class="row justify-content-center justify-content-md-start">
                     <div class="col-md-12">

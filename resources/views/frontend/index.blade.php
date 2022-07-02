@@ -8,18 +8,20 @@
             <div class="container">
                 <div class="row">
                     <!--Start Single Featured Box-->
+                    @foreach ($cat as $category)
+                        
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-featured-box">
                             <div class="inner clearfix">
                                 <div class="img-holder">
-                                    <img src="{{url('frontend/images/resources/featured-1.png')}}" alt="Awesome Image">
+                                    <img src="{{env('APP_URL2').'/category/'.$category->images}}" alt="Awesome Image">
                                 </div>
                                 <div class="static-content">
                                     <div class="icon">
                                         <span class="icon-architecture-and-city"></span>
                                     </div>
                                     <div class="title">
-                                        <h3>Residential Design</h3>
+                                        <h3>{{$category->name}}</h3>
                                     </div>
                                 </div>
                                 <div class="overlay-content">
@@ -30,87 +32,22 @@
                                         <span class="icon-architecture-and-city"></span>
                                     </div>
                                     <div class="title">
-                                        <h3>Residential Design</h3>
+                                        <h3>{{$category->name}}</h3>
                                     </div>
                                     <div class="text">
-                                        <p>Righteous indignations working beguileds demoralized that blinded.</p>
+                                        <p>{{$category->massage}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <!--End Single Featured Box-->
-                    <!--Start Single Featured Box-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-featured-box">
-                            <div class="inner clearfix">
-                                <div class="img-holder">
-                                    <img src="{{url('frontend/images/resources/featured-2.png')}}" alt="Awesome Image">
-                                </div>
-                                <div class="static-content">
-                                    <div class="icon">
-                                        <span class="icon-sheriff"></span>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Commercial Design</h3>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="overlay-image">
-                                        <img src="{{url('frontend/images/resources/featured-2-overlay.png')}}" alt="Awesome Image">
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-sheriff"></span>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Commercial Design</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Righteous indignations working beguileds demoralized that blinded.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Featured Box-->
-                    <!--Start Single Featured Box-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-featured-box">
-                            <div class="inner clearfix">
-                                <div class="img-holder">
-                                    <img src="{{url('frontend/images/resources/featured-3.png')}}" alt="Awesome Image">
-                                </div>
-                                <div class="static-content">
-                                    <div class="icon">
-                                        <span class="icon-cross"></span>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Hospitality Design</h3>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="overlay-image">
-                                        <img src="{{url('frontend/images/resources/featured-3-overlay.png')}}" alt="Awesome Image">
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-cross"></span>
-                                    </div>
-                                    <div class="title">
-                                        <h3>Hospitality Design</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>Righteous indignations working beguileds demoralized that blinded.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Featured Box-->
+                    
                 </div>
             </div>
             <div class="container about-style3-content">
-                <div class="about-style3-bg banner-animate"
-                    style="background-image: url({{url('frontend/images/pattern/about-style3-bg.jpg')}});"></div>
+                <div class="about-style3-bg banner-animate" style="background-image: url({{url('frontend/images/pattern/about-style3-bg.jpg')}});"></div>
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="sec-title text-center">
@@ -345,8 +282,8 @@
                         <h1>Creating lasting impressions through<br> <span>interior design.</span></h1>
                     </div>
                     <div class="button">
-                        <a class="btn-one call-us" href="#"><i class="icon-music"></i>+324 123 45 978</a>
-                        <a class="btn-one" href="#">Maintenance Guide<span class="flaticon-next"></span></a>
+                        <a class="btn-one call-us" href="#"><i class="icon-music"></i>+91 {{$contact->phone}}</a>
+                        <a class="btn-one" href="{{url('/offering')}}">Offers Guide<span class="flaticon-next"></span></a>
                     </div>
                 </div>
             </div>
@@ -356,7 +293,15 @@
 {{-- slogan area end --}}
 
 {{-- @include('frontend.latest_projects') --}}
+
+{{-- Workprocess start here --}}
 @include('frontend.workprocess')
+{{-- Workprocess ends here --}}
+
+
+{{-- Workprocess start here --}}
+@include('include.clients')
+{{-- Workprocess ends here --}}
 
         <!--Start Testimonial Style3 Area-->
         <section class="testimonial-style3-area">
@@ -372,21 +317,21 @@
                     <div class="col-xl-12 col-lg-12">
                         <div class="testimonial-carousel-2 owl-carousel owl-theme">
                             <!--Start Single Testimonial style2-->
+                            @foreach ($testi as $testimonial)
+                                
                             <div class="single-testimonial-style3">
                                 <div class="inner-content">
                                     <div class="client-info">
                                         <div class="image">
-                                            <img src="{{url('frontend/images/testimonial/testi-style3-1.png')}}" alt="Awesome Image">
+                                            <img src="{{env('APP_URL2').'/testimonial/'.$testimonial->images}}" alt="Awesome Image">
                                         </div>
                                         <div class="title">
-                                            <h3>Shivani Rawat</h3>
-                                            <span>Jamshedpur</span>
+                                            <h3>{{$testimonial->name}}</h3>
+                                            <span>{{$testimonial->designation}}</span>
                                         </div>
                                     </div>
                                     <div class="text-box">
-                                        <p>"Pesante have done an excellent job presenting the analysis & insights. I am
-                                            confident in saying have helped encounter is to be welcomed and every pain
-                                            avoided”.</p>
+                                        <p>"{{$testimonial->massage}}”</p>
                                     </div>
                                     <div class="review-box">
                                         <ul>
@@ -399,37 +344,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                             <!--End Single Testimonial style2 -->
-                            <!--Start Single Testimonial style2-->
-                            <div class="single-testimonial-style3">
-                                <div class="inner-content">
-                                    <div class="client-info">
-                                        <div class="image">
-                                            <img src="{{url('frontend/images/testimonial/testi-style3-2.png')}}" alt="Awesome Image">
-                                        </div>
-                                        <div class="title">
-                                            <h3>Ramesh Singhal</h3>
-                                            <span>Jamshedpur</span>
-                                        </div>
-                                    </div>
-                                    <div class="text-box">
-                                        <p>“Owing to the claims of duty or the obligations of business it will
-                                            frequently occur that pleasures have to be repudiated and annoyances
-                                            accepted always holds”.</p>
-                                    </div>
-                                    <div class="review-box">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Single Testimonial style2 -->
-
                         </div>
                     </div>
                 </div>

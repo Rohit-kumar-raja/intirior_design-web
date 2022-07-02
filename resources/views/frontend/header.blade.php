@@ -1,4 +1,4 @@
-@include('frontend.feedback')
+{{-- @include('frontend.feedback') --}}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +43,7 @@
 <body>
     <div class="boxed_wrapper">
 
-        <div class="preloader"></div>
+        {{-- <div class="preloader"></div> --}}
 
         <!-- Start Top Bar style3 -->
         <section class="topbar-style3-area">

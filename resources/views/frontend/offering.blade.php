@@ -24,6 +24,61 @@
     </div>
 </section>
 <!--End breadcrumb area-->
+{{-- Offer section starts --}}
+<section class="about-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5">
+                <div class="about-image-box">
+                    <div class="inner-box">
+                        <img src="{{url('frontend/images/resources/about-image.jpg')}}" alt="Awesome Image">
+                        <div class="overlay">
+                            <div class="box">
+                                <div class="icon wow zoomIn animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: zoomIn;">
+                                    <img src="images/icon/home.png" alt="Home Icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <p>Experiencd &amp; Well knowledgeable Interior designers.</p>
+                        <h3>Shelly Johnson, <span>CEO &amp; Founder</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7">
+                <div class="about-text">
+                    <div class="sec-title">
+                        {{-- <p>About Company</p> --}}
+                        <div class="title">Innovative solutions<br> <span>to move your business forward.</span></div>
+                    </div>
+                    <div class="inner-content">
+                        <div class="text">
+                            <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound.</p>
+                            <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee.</p>
+                        </div>
+                        <div class="about-carousel-box owl-carousel owl-theme owl-loaded owl-drag">
+                                      <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1952px, 0px, 0px); transition: all 1s ease 0s; width: 3416px;"><div class="owl-item cloned" style="width: 488px;"><div class="single-box">
+                                <div class="icon-holder">
+                                    <span class="icon-target"></span>
+                                </div>
+                                <div class="text-holder">
+                                    <h3>Mission Statement</h3>
+                                    <p>Same as saying through shrinking from pain these perfectly simple and easy to distinguish.</p>
+                                </div>
+                            </div>
+                        </div></div></div>
+                        </div></div></div></div></div></div><div class="owl-nav disabled"><div class="owl-prev"><span class="fa fa-angle-left left"><p>Prev</p></span></div><div class="owl-next"><span class="fa fa-angle-right right"><p>Next</p></span></div></div><div class="owl-dots"><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{-- offer section ends --}}
+
 
 {{-- Offering content start --}}
 <section id="blog-area" class="blog-single-area">
@@ -33,31 +88,8 @@
                 <div class="blog-post">
                     <div class="single-blog-post">
                     <div class="title pb-3">Offers You will Love</div>
-                        <div class="main-image-box">
-                            <img src="{{url('frontend/images/blog/blog-single.jpg')}}" alt="Awesome Image">
-                        </div>
-                        <div class="top-text-box">
-                            <h3>“Innovative solutions to move your business forward.”</h3>
-                        </div>
-                        <div class="quote-bottom-text">
-                            <p>Righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal
-                                blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
-                        </div>
-                        <div class="blog-single-image-with-text-box">
-                            <ul class="image-box clearfix">
-                                <li>
-                                    <img src="{{url('frontend/images/blog/blog-single-1.jpg')}}" alt="Awesome Image">
-                                </li>
-                                <li>
-                                    <img src="{{url('frontend/images/blog/blog-single-2.jpg')}}" alt="Awesome Image">
-                                </li>
-                            </ul>
-                            <div class="text-box">
-                                <p>Their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled
-                                    and when nothing being able to do what we like best, every pleasure is to be welcomed and every pain avoided in certain circumstances owing the claims of duty or the obligations of business it will frequently
-                                    occur that repudiated.</p>
-                            </div>
-                        </div>
+                        
+                     
 
                         <div class="blog-single-bottom-content-box">
                             <h2>Ideas for Study Room Design </h2>

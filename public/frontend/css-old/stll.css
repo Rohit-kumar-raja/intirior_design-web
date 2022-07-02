@@ -378,11 +378,11 @@
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    background-color: var(--style-3-color);
+    background-color: #2e3093;
     border: 1px solid var(--style-3-color);
 }
 .dark.modal-style-3 .modal-content{
-    background: #0b0b1f;
+    background: #2e3093;
     color: #fff;
 }
 .dark.modal-style-3 .close, .modal-style-1.dark .modal-login h4{

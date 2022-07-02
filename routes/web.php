@@ -9,6 +9,7 @@ use App\Http\Controllers\frontend\ServicessingleController;
 use App\Http\Controllers\frontend\HowitworksController;
 use App\Http\Controllers\frontend\LoginController;
 use App\Http\Controllers\frontend\OfferingController;
+use App\Http\Controllers\frontend\SiteinfosController;
 
 
 /*

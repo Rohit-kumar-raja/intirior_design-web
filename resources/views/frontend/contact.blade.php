@@ -1,6 +1,7 @@
         <?php // include "header.php";   ?>
         @extends('frontend.main')
         @section('main-container')
+
         <!--Start breadcrumb area-->
         <section class="breadcrumb-area style2" style="background-image: url({{url('frontend/images/resources/breadcrumb-bg-2.jpg')}});">
             <div class="container">
@@ -39,21 +40,20 @@
                                     {{-- <span><i class="fa fa-map-marker" aria-hidden="true"></i></span> --}}
                                         <img src="{{url('frontend/images/icon/location.png')}}" style="width: 50px;">
                                         <h6>Location</h6>
-                                        <p style="margin-bottom:0px;">Lane No-10, sakchi</p>
-                                        <p>Jamshedpur - 831001</p>
+                                        <p style="margin-bottom:0px;">{{$contact->address}}</p>                                        
                                     </div><br>
                                     <div class="col-xl-12" style="text-align:center;">
                                     {{-- <span><i class="fa fa-phone" aria-hidden="true"></i></span> --}}
                                         <img src="{{url('frontend/images/icon/calll.png')}}" style="width: 50px;">
                                         <h6>Call Us</h6>
-                                        <p style="margin-bottom:0px;">9876543210</p>
-                                        <p>9876543210</p>
+                                        <p style="margin-bottom:0px;">{{$contact->phone}}</p>
+                                        <p>{{$contact->phone2}}</p>
                                     </div><br>
                                     <div class="col-xl-12" style="text-align:center;">
                                     {{-- <span><i class="fa fa-envelope" aria-hidden="true"></i></span> --}}
                                         <img src="{{url('frontend/images/icon/mail.png')}}" style="width: 50px;">
                                         <h6>Email Us</h6>
-                                        <p>abc22@gmail.com</p>
+                                        <p>{{$contact->email}}</p>
                                     </div>
                                     <div class="col-xl-12">
                                         <div class="row">

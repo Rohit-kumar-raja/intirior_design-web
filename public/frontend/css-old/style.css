@@ -6980,7 +6980,7 @@
             .latest-projects-area-new {
                 position: relative;
                 display: block;
-                background: #070a50;
+                background: #27282c;
                 width: 100%;
                 padding: 50px 60px 5px;
             }
@@ -7093,7 +7093,7 @@
                 background: transparent;
                 width: 55px;
                 height: 55px;
-                border: 1px solid #f7f8f3;
+                border: 1px solid #3f3f42;
                 line-height: 54px;
                 margin: 0;
                 padding: 0;
@@ -7106,7 +7106,7 @@
             }
             
             .project-carousel-v3.owl-carousel .owl-nav [class*="owl-"] i:before {
-                color: #fff;
+                color: #5e5e5e;
                 font-size: 20px;
                 font-weight: 400;
             }

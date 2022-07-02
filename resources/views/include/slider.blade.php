@@ -15,7 +15,7 @@
                     data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3=""
                     data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                     data-rotate="0" data-saveperformance="off" data-slotamount="default"
-                    data-thumb="{{url('frontend/images/slides/v3-1.jpg')}}" data-title="Slide Title"
+                    data-thumb="{{env('APP_URL2').'/slider/'.$sl->image_name}}" data-title="Slide Title"
                     data-transition="parallaxvertical">
 
                     
