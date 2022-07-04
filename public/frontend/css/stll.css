@@ -378,8 +378,7 @@
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    background-color: var(--style-3-color);
-    border: 1px solid var(--style-3-color);
+    border: 1px solid #009688;
 }
 .dark.modal-style-3 .modal-content{
     background: #0b0b1f;

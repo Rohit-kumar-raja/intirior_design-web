@@ -35,7 +35,7 @@
                         </div>
                         <div class="form-group text-center mt-3">
                         	<!-- submit button -->
-							<button id="signup-button" type="submit" class="btn btn-primary btn-signin">Login</button>
+							<button id="signup-button" type="submit" class="text-white btn btn-signin">Login</button>
 							
 						</div>
                     </form>
@@ -79,7 +79,7 @@
                             <i class="fa fa-eye-slash"></i>
                         </div>
                         <div class="form-group text-center mt-3">
-							<button id="signup-button" type="submit" class="btn btn-primary btn-signin">Register</button>
+							<button id="signup-button" type="submit" class="text-white btn btn-signin">Register</button>
 							
 						</div>
                     </form>

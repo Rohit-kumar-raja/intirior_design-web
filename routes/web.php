@@ -10,7 +10,7 @@ use App\Http\Controllers\frontend\HowitworksController;
 use App\Http\Controllers\frontend\LoginController;
 use App\Http\Controllers\frontend\OfferingController;
 use App\Http\Controllers\frontend\SiteinfosController;
-
+use App\Http\Controllers\frontend\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +33,4 @@ Route::get('contact',[ContactController::class,'index']);
 Route::get('services',[ServicesController::class,'index']);
 Route::get('single',[ServicessingleController::class,'index']);
 Route::get('offering',[OfferingController::class,'index']);
+Route::get('profile',[ProfileController::class,'index']);
