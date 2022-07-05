@@ -39,7 +39,7 @@
                                                 <img class="profile_img"
                                                     src="{{ url('frontend/images/testimonial/user.png') }}"
                                                     alt="student dp">
-                                                <h3>User Name</h3>
+                                                <h3>{{$users[0]->name}}</h3>
                                             </div>
                                             <div class="card-body">
                                                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -69,17 +69,17 @@
                                                             <tr>
                                                                 <th width="30%">Phone No</th>
                                                                 <td width="2%">:</td>
-                                                                <td>9876542301</td>
+                                                                <td>{{$users[0]->phone}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">Email Id</th>
                                                                 <td width="2%">:</td>
-                                                                <td>user@gmail.com</td>
+                                                                <td>{{$users[0]->email}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">Address</th>
                                                                 <td width="2%">:</td>
-                                                                <td>Sakchi</td>
+                                                                <td>{{$users[0]->address}}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -88,17 +88,17 @@
                                                             <tr>
                                                                 <th width="30%">Address</th>
                                                                 <td width="2%">:</td>
-                                                                <td>Sakchi</td>
+                                                                <td>{{$users[0]->address}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">City</th>
                                                                 <td width="2%">:</td>
-                                                                <td>Jamshedpur</td>
+                                                                <td>{{$users[0]->city}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">State</th>
                                                                 <td width="2%">:</td>
-                                                                <td>Jharkhand</td>
+                                                                <td>{{$users[0]->state}}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
