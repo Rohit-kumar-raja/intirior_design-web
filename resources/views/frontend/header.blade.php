@@ -108,8 +108,13 @@
                         </li>
                         <li class="dropdown"><a href="{{url('/services')}}">Services</a>
                         <ul>
-                                <li><a href="{{url('/services')}}">Services</a></li>
-                                <li><a href="{{url('/single')}}">Services Single</a></li>
+                            @php
+                                $categories=DB::table('categories')->get();
+                            @endphp
+                            @foreach ($categories as $category )
+                            <li><a href="{{url('/services')}}">{{ $category->name}}</a></li>
+                            @endforeach
+                             
                             </ul>
                     </li>
 
