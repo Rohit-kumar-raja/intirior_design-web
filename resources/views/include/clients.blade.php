@@ -3,7 +3,7 @@
 @endphp
 {{-- <link ref="{{url('frontend/css/work-process.css')}}"> --}}
 <!--Start Latest Projects Area-->
-<section class="latest-projects-area-new">
+<section class="latest-projects-area-new p-4">
     <div class="container">
         <div class="sec-title">
             {{-- <p>Clients</p> --}}

@@ -27,48 +27,43 @@
         <section class="about-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="about-image-box">
-                            <div class="inner-box">
-                                <img src="{{ url('frontend/images/resources/about-image.jpg') }}" alt="Awesome Image">
-                                <div class="overlay">
-                                    <div class="box">
-                                        <div class="icon wow zoomIn animated" data-wow-delay="300ms"
-                                            data-wow-duration="1500ms"
-                                            style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: zoomIn;">
-                                            <img src="images/icon/home.png" alt="Home Icon">
+                    @foreach ($data as $offers)
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="about-image-box">
+                                <div class="inner-box">
+                                    <img src="{{ env('APP_URL2') . '/offering/' . $offers->images  }}" alt="Awesome Image">
+                                    <div class="overlay">
+                                        <div class="box">
+                                            <div class="icon wow zoomIn animated" data-wow-delay="300ms"
+                                                data-wow-duration="1500ms"
+                                                style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: zoomIn;">
+                                                <img src="images/icon/home.png" alt="Home Icon">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="text-box">
-                           
-                                <h3>Shelly Johnson, <span>CEO &amp; Founder</span></h3>
+                               
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="about-text">
-                            <div class="sec-title">
-                                {{-- <p>About Company</p> --}}
-                                <div class="title">Innovative solutions<br> <span>to move your business forward.</span>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="p-3 mt-2">
+                                <div class="sec-title pb-3">
+                                    {{-- <p>About Company</p> --}}
+                                    <div class="title"><?= $offers->name ?></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="inner-content">
-                                <div class="text">
-                                    <p>We denounce with righteous indignation and dislike men who are so beguiled and
-                                        demoralized by the charms of pleasure of the moment, so blinded by desire, that they
-                                        cannot foresee the pain and trouble that are bound.</p>
-                                    <p>Indignation and dislike men who are so beguiled and demoralized by the charms
-                                        pleasure of the moment, so blinded by desire, that they cannot foresee.</p>
+                                <div class="inner-content">
+                                    <div class="text text-justify">
+                                        <p  > <?= $offers->massage ?></p>
+                                    </div>
+
                                 </div>
-                              
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
-       
+
         </section>
         {{-- offer section ends --}}
 

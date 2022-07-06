@@ -7103,6 +7103,7 @@
             
             .project-carousel-v3.owl-carousel .owl-nav .owl-prev {
                 right: 65px;
+                top: 45px;
             }
             
             .project-carousel-v3.owl-carousel .owl-nav [class*="owl-"] i:before {
@@ -7113,6 +7114,7 @@
             
             .project-carousel-v3.owl-carousel .owl-nav .owl-next {
                 margin-left: 10px;
+                top: 45px;
             }
             
             .project-carousel-v3.owl-carousel .owl-nav [class*="owl-"]:hover {

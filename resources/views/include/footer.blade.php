@@ -1,19 +1,21 @@
-<section class="slogan-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="inner-content flex-box-two fix">
-                    <div class="title float-left">
-                        <h3>Your dream kitchen is just a click away</h3>
-                    </div>
-                    <div class="button float-right">
-                        <a class="btn-one" href="#">Get started<span class="flaticon-next"></span></a>
+<div class="pb-3">
+    <section class="slogan-area">
+        <div class="container">
+            <div class="row " >
+                <div class="col-xl-12 p-1">
+                    <div class="inner-content flex-box-two fix">
+                        <div class="title float-left">
+                            <h3>Your dream kitchen is just a click away</h3>
+                        </div>
+                        <div class="button float-right">
+                            <a class="btn-one" href="#">Get started<span class="flaticon-next"></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 <!--Start footer area Style2-->
 <footer class="footer-area style3">
     <div class="container">

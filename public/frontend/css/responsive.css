@@ -3302,3 +3302,6 @@ li .single-footer-contact-info .inner {
   .h-230{
 height: 230px;
   }
+  .text-justify{
+    text-align: justify !important;
+  }

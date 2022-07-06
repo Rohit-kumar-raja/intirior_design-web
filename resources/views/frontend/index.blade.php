@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="overlay-content">
                                         <div class="overlay-image">
-                                            <img src="{{ url('frontend/images/resources/featured-1-overlay.png') }}"
+                                            <img src="{{ env('APP_URL2') . '/category/' . $category->images }}"
                                                 alt="Awesome Image">
                                         </div>
                                         <div class="icon">
