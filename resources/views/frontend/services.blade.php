@@ -1,8 +1,8 @@
-        <?php // include "header.php";    ?>
-        @extends('frontend.main')
-        @section('main-container')
-       <!--Start breadcrumb area-->
-        <section class="breadcrumb-area style2" style="background-image: url({{url('frontend/images/resources/breadcrumb-bg-2.jpg')}});">
+<x-layout>
+    @slot('title', 'Home')
+    @slot('body')
+        <section class="breadcrumb-area style2"
+            style="background-image: url({{ url('frontend/images/resources/breadcrumb-bg-2.jpg') }});">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -25,8 +25,8 @@
         <!--End breadcrumb area-->
 
         {{-- category1 section starts here --}}
-         <!--Start Recently Project style2 Area-->
-         <section class="recently-project-style2-area">
+        <!--Start Recently Project style2 Area-->
+        <section class="recently-project-style2-area">
             <div class="container">
                 <div class="sec-title text-center">
                     <p>Categories</p>
@@ -37,22 +37,22 @@
                         <div class="project-carousel-v2 owl-carousel owl-theme">
                             <!--Start single project style1-->
                             @foreach ($cat as $category)
-                                
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="{{env('APP_URL2').'/category/'.$category->images}}" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        {{-- <span>Modern Design</span> --}}
-                                        <h3>{{$category->name}}</h3>
+                                <div class="single-project-style2">
+                                    <div class="img-holder">
+                                        <img src="{{ env('APP_URL2') . '/category/' . $category->images }}"
+                                            alt="Awesome Image">
+                                        <div class="read-more">
+                                            <a href="#"><span class="icon-next"></span></a>
+                                        </div>
+                                        <div class="title-box">
+                                            {{-- <span>Modern Design</span> --}}
+                                            <h3>{{ $category->name }}</h3>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             @endforeach
                             <!--End single project style1-->
-                           
+
                         </div>
                     </div>
                 </div>
@@ -71,28 +71,29 @@
                             <div class="title">Working <span>Sectors</span></div>
                         </div>
                     </div>
-                  
+
                 </div>
                 <div class="row mt-3">
-                    @foreach ($services as $data )
-                    <!--Start single service style2-->
-                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 ">
-                        <div class="single-service-style2 wow fadeInUp border" data-wow-delay="0ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="{{url('frontend/images/services/v2-1.jpg')}}" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                            </div>
-                            <div class="text-holder p-2">
-                               
+                    @foreach ($services as $data)
+                        <!--Start single service style2-->
+                        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 ">
+                            <div class="single-service-style2 wow fadeInUp border" data-wow-delay="0ms"
+                                data-wow-duration="1200ms">
+                                <div class="img-holder">
+                                    <img src="{{ url('frontend/images/services/v2-1.jpg') }}" alt="Awesome Image">
+                                    <div class="overlay-style-two"></div>
+                                </div>
+                                <div class="text-holder p-2">
+
                                     <h4>{{ $data->log_title }}</h4>
                                     <div class="text">
-                                        <p> {{ substr($data->log_description,0,100) }} <a href="">more</a>  </p>
+                                        <p> {{ substr($data->log_description, 0, 100) }} <a href="">more</a> </p>
                                     </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--End single service style2-->
-                   @endforeach
+                        <!--End single service style2-->
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -110,7 +111,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="{{url('frontend/images/services/1.jpg')}}" alt="Awesome Image">
+                                <img src="{{ url('frontend/images/services/1.jpg') }}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                             </div>
                             <div class="text-holder bg-white">
@@ -127,12 +128,13 @@
                                         <div class="title">
                                             <h3>Lighting</h3>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="overlay-content">
                                     <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +145,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="{{url('frontend/images/services/2.jpg')}}" alt="Awesome Image">
+                                <img src="{{ url('frontend/images/services/2.jpg') }}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                             </div>
                             <div class="text-holder bg-white">
@@ -164,7 +166,8 @@
                                 </div>
                                 <div class="overlay-content">
                                     <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +178,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                         <div class="single-service-style1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="{{url('frontend/images/services/3.jpg')}}" alt="Awesome Image">
+                                <img src="{{ url('frontend/images/services/3.jpg') }}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                             </div>
                             <div class="text-holder bg-white">
@@ -196,7 +199,8 @@
                                 </div>
                                 <div class="overlay-content">
                                     <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -205,9 +209,10 @@
                     <!--End single service style1-->
                     <!--Start single service style1-->
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
+                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms"
+                            data-wow-duration="1200ms">
                             <div class="img-holder">
-                                <img src="{{url('frontend/images/services/4.jpg')}}" alt="Awesome Image">
+                                <img src="{{ url('frontend/images/services/4.jpg') }}" alt="Awesome Image">
                                 <div class="overlay-style-two"></div>
                             </div>
                             <div class="text-holder bg-white">
@@ -228,7 +233,8 @@
                                 </div>
                                 <div class="overlay-content">
                                     <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
+                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -248,11 +254,13 @@
                 </div>
                 <div class="row">
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: fadeInUp;">
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="100ms"
+                        data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>01</span></div>
                             <div class="inner">
-                                <h3>DuraBuild  &amp; Cabinets</h3>
+                                <h3>DuraBuild &amp; Cabinets</h3>
                                 <p>with soft-closing hinges and sturdy build.</p>
                                 <div class="icon-holder">
                                     <span class="icon-productive"></span>
@@ -262,7 +270,9 @@
                     </div>
                     <!--End Single Working Process-->
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="300ms"
+                        data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>02</span></div>
                             <div class="inner">
@@ -276,7 +286,9 @@
                     </div>
                     <!--End Single Working Process-->
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
+                        data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>03</span></div>
                             <div class="inner">
@@ -291,7 +303,9 @@
                     <!--End Single Working Process-->
 
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
+                        data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>04</span></div>
                             <div class="inner">
@@ -306,7 +320,9 @@
                     <!--End Single Working Process-->
 
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
+                        data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>05</span></div>
                             <div class="inner">
@@ -321,7 +337,9 @@
                     <!--End Single Working Process-->
 
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
+                        data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>06</span></div>
                             <div class="inner">
@@ -337,10 +355,5 @@
                 </div>
             </div>
         </section>
-
-       
-        <?php// include "footer.php"; ?>
-        @endsection
-        
-</body>
-</html>
+    @endslot
+</x-layout>

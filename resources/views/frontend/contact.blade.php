@@ -1,9 +1,8 @@
-        <?php // include "header.php";   ?>
-        @extends('frontend.main')
-        @section('main-container')
-
-        <!--Start breadcrumb area-->
-        <section class="breadcrumb-area style2" style="background-image: url({{url('frontend/images/resources/breadcrumb-bg-2.jpg')}});">
+<x-layout>
+    @slot('title', 'Contact us')
+    @slot('body')
+        <section class="breadcrumb-area style2"
+            style="background-image: url({{ url('frontend/images/resources/breadcrumb-bg-2.jpg') }});">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -29,7 +28,7 @@
         <section class="login-register-area">
             <div class="container">
                 <div class="row">
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pd-0">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 pd-0">
                         <div class="form">
                             <div class="shop-page-title-1" style="text-align:center;">
                                 <div class="title">Get In <span>Touch</span></div>
@@ -37,28 +36,28 @@
                             <div class="row">
                                 <form action="#">
                                     <div class="col-xl-12" style="text-align:center;">
-                                    {{-- <span><i class="fa fa-map-marker" aria-hidden="true"></i></span> --}}
-                                        <img src="{{url('frontend/images/icon/location.png')}}" style="width: 50px;">
+                                        {{-- <span><i class="fa fa-map-marker" aria-hidden="true"></i></span> --}}
+                                        <img src="{{ url('frontend/images/icon/location.png') }}" style="width: 50px;">
                                         <h6>Location</h6>
-                                        <p style="margin-bottom:0px;">{{$contact->address}}</p>                                        
+                                        <p style="margin-bottom:0px;">{{ $contact->address }}</p>
                                     </div><br>
                                     <div class="col-xl-12" style="text-align:center;">
-                                    {{-- <span><i class="fa fa-phone" aria-hidden="true"></i></span> --}}
-                                        <img src="{{url('frontend/images/icon/calll.png')}}" style="width: 50px;">
+                                        {{-- <span><i class="fa fa-phone" aria-hidden="true"></i></span> --}}
+                                        <img src="{{ url('frontend/images/icon/calll.png') }}" style="width: 50px;">
                                         <h6>Call Us</h6>
-                                        <p style="margin-bottom:0px;">{{$contact->phone}}</p>
-                                        <p>{{$contact->phone2}}</p>
+                                        <p style="margin-bottom:0px;">{{ $contact->phone }}</p>
+                                        <p>{{ $contact->phone2 }}</p>
                                     </div><br>
                                     <div class="col-xl-12" style="text-align:center;">
-                                    {{-- <span><i class="fa fa-envelope" aria-hidden="true"></i></span> --}}
-                                        <img src="{{url('frontend/images/icon/mail.png')}}" style="width: 50px;">
+                                        {{-- <span><i class="fa fa-envelope" aria-hidden="true"></i></span> --}}
+                                        <img src="{{ url('frontend/images/icon/mail.png') }}" style="width: 50px;">
                                         <h6>Email Us</h6>
-                                        <p>{{$contact->email}}</p>
+                                        <p>{{ $contact->email }}</p>
                                     </div>
                                     <div class="col-xl-12">
                                         <div class="row">
                                             <div class="col-xl-6 col-lg-6 col-sm-12">
-                                          
+
                                                 <div class="remember-text">
                                                 </div>
                                             </div>
@@ -104,7 +103,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="input-field">
-                                            <textarea id="w3review" name="message" rows="4" cols="50" >Enter Message
+                                            <textarea id="w3review" name="message" rows="4" cols="50">Enter Message
                                                  {{-- <i class="fa-regular fa-message" aria-hidden="true"></i> --}}
                                             </textarea>
                                         </div>
@@ -131,12 +130,5 @@
         </section>
         <!--End login register area-->
 
-
-        <?php //include "footer.php"; ?>
-        @endsection
-        
-</body>
-
-
-<!-- account 07:01:11 GMT -->
-</html>
+    @endslot
+</x-layout>

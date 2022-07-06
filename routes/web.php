@@ -27,10 +27,10 @@ use App\Http\Controllers\frontend\ProfileController;
 //     return view('welcome');
 // });
 
-Route::get('/',[HomeController::class,'index']);
-Route::get('about',[AboutController::class,'index']);
-Route::get('contact',[ContactController::class,'index']);
-Route::get('services',[ServicesController::class,'index']);
-Route::get('single',[ServicessingleController::class,'index']);
-Route::get('offering',[OfferingController::class,'index']);
-Route::get('profile',[ProfileController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('index');
+Route::get('about',[AboutController::class,'index'])->name('about');
+Route::get('contact',[ContactController::class,'index'])->name('contact');
+Route::get('services',[ServicesController::class,'index'])->name('services');
+Route::get('services/single/{slug}',[ServicessingleController::class,'index'])->name('services.single');
+Route::get('offering',[OfferingController::class,'index'])->name('offering');
+Route::get('profile',[ProfileController::class,'index'])->name('profile');
