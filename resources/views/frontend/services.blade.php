@@ -21,10 +21,55 @@
                     </div>
                 </div>
             </div>
+           
         </section>
         <!--End breadcrumb area-->
 
-        {{-- category1 section starts here --}}
+      
+        <!--Start services style2 Service Page-->
+        <section class="services-style2-service-page " style="background: #f7f8f3">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-xl-5">
+                        <div class="sec-title">
+                            <p class="mt-4">Services</p>
+                            <div class="title">Working <span>Sectors</span></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-3">
+                    @foreach ($services as $data)
+                        <!--Start single service style2-->
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12  ">
+                            <div class="single-service-style2 wow fadeInUp border card" data-wow-delay="0ms"
+                                data-wow-duration="1200ms">
+                                <div class="img-holder">
+                                    <img src="{{ url('frontend/images/services/v2-1.jpg') }}" alt="Awesome Image">
+                                    <div class="overlay-style-two"></div>
+                                </div>
+                                <div class="text-holder p-2">
+
+                                    <h4>{{ $data->log_title }}</h4>
+                                    <div class="text">
+                                        <p> {{ substr($data->log_description, 0, 100) }} <a href="{{ route('services.single',$data->slug) }}">more</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single service style2-->
+                    @endforeach
+               
+                </div>
+                <div class="p-2 text-center">
+                    {{ $services->links() }}
+                </div>
+            </div>
+         
+        </section>
+       
+        <!--End services style2 Service Page-->
+  {{-- category1 section starts here --}}
         <!--Start Recently Project style2 Area-->
         <section class="recently-project-style2-area">
             <div class="container">
@@ -42,7 +87,7 @@
                                         <img src="{{ env('APP_URL2') . '/category/' . $category->images }}"
                                             alt="Awesome Image">
                                         <div class="read-more">
-                                            <a href="#"><span class="icon-next"></span></a>
+                                            <a href="{{ route('services.category',$category->id) }}"><span class="icon-next"></span></a>
                                         </div>
                                         <div class="title-box">
                                             {{-- <span>Modern Design</span> --}}
@@ -61,46 +106,8 @@
         <!--End Recently Project style2 Area-->
         {{-- category1 section ends here --}}
 
-        <!--Start services style2 Service Page-->
-        <section class="services-style2-service-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5">
-                        <div class="sec-title">
-                            <p>Services</p>
-                            <div class="title">Working <span>Sectors</span></div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row mt-3">
-                    @foreach ($services as $data)
-                        <!--Start single service style2-->
-                        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 ">
-                            <div class="single-service-style2 wow fadeInUp border" data-wow-delay="0ms"
-                                data-wow-duration="1200ms">
-                                <div class="img-holder">
-                                    <img src="{{ url('frontend/images/services/v2-1.jpg') }}" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
-                                </div>
-                                <div class="text-holder p-2">
-
-                                    <h4>{{ $data->log_title }}</h4>
-                                    <div class="text">
-                                        <p> {{ substr($data->log_description, 0, 100) }} <a href="">more</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End single service style2-->
-                    @endforeach
-                </div>
-            </div>
-        </section>
-        <!--End services style2 Service Page-->
-
         <!--Start special services section here -->
-        <section class="services-style1-service-page">
+        {{-- <section class="services-style1-service-page">
             <div class="container">
                 <div class="sec-title text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
                     <p>Interior Elements</p>
@@ -243,7 +250,7 @@
                     <!--End single service style1-->
                 </div>
             </div>
-        </section>
+        </section> --}}
         {{-- end special service section here --}}
         <!--End services style1 service page-->
         <section class="working-process-area">

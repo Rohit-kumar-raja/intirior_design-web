@@ -69,7 +69,7 @@
                                 $categories=DB::table('categories')->get();
                             @endphp
                             @foreach ($categories as $category )
-                            <li><a href="{{url('/services')}}">{{ $category->name}}</a></li>
+                            <li><a href="{{ route('services.category',$category->id) }}">{{ $category->name}}</a></li>
                             @endforeach
                              
                             </ul>

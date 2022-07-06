@@ -3292,9 +3292,13 @@ li .single-footer-contact-info .inner {
 	line-height: 1.3em;
     font-weight: 500;
 } 
-    
-    
-    
-    
+
 }
 
+.h-410{
+    height: 410px;
+
+  }
+  .h-230{
+height: 230px;
+  }

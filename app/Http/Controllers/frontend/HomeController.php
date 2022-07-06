@@ -16,7 +16,7 @@ class HomeController extends Controller
         $category = Category::where('status','1')->Limit('3')->get();
         $testimonial = Testimonial::where('status','1')->get();
         $contact = Site_infos::where('status','1')->first();
-        $services=Service::where('status','1')->first();
+        $services=Service::where('status',1)->orderByDesc('id')->take(20)->get();
         // dd($contact);
         return view('frontend.index',['cat'=> $category,'testi'=>$testimonial,'contact'=>$contact,'services'=>$services]);
     }
