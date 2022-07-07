@@ -11,9 +11,16 @@
 	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
+
+                    <x-auth-session-status class="mb-4" :status="session('status')" />
+
+                    <!-- Validation Errors -->
+                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
 					<p class="ml-3">Welcome back!</p>
 					<!-- dont forget to add action and action method  -->			
-					<form action="" method="">
+					<form action="{{route('login')}}" method="post">
+                        @csrf
                         <div class="form-group">
                             <input type="email" class="form-control" placeholder="Enter email address" required="" value="" name="email">
                             <i class="fa fa-envelope"></i>
@@ -57,7 +64,8 @@
 				<div class="modal-body">
 					<p class="ml-3">Create your account!</p>
 					<!-- dont forget to add action and action method  -->
-					<form action="" method="">
+					<form action="{{ route('register') }}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" placeholder="Enter your name" required="" value="">
                             <i class="fa fa-user"></i>

@@ -1,24 +1,22 @@
+{{-- <div class="preloader"></div> --}}
 
-
-        {{-- <div class="preloader"></div> --}}
-
-        <!-- Start Top Bar style3 -->
-        <section class="topbar-style3-area">
-            <div class="container clearfix">
-                <div class="topbar-style3-content">
-                    <div class="topbar-style3-left">
-                        <ul class="clearfix">
-                            <li>Togo Team Inspiring Interiors </li>
-                        </ul>
-                    </div>
-                    <div class="top-style2-right">
-                        <ul class="topbar-social-links">
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        </ul>
-                        <!-- <div class="language-switcher">
+<!-- Start Top Bar style3 -->
+<section class="topbar-style3-area">
+    <div class="container clearfix">
+        <div class="topbar-style3-content">
+            <div class="topbar-style3-left">
+                <ul class="clearfix">
+                    <li>Togo Team Inspiring Interiors </li>
+                </ul>
+            </div>
+            <div class="top-style2-right">
+                <ul class="topbar-social-links">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+                <!-- <div class="language-switcher">
                             <div id="polyglotLanguageSwitcher">
                                 <form action="#">
                                 <select id="polyglot-language-options">
@@ -31,11 +29,11 @@
                                 </form>
                             </div>
                         </div> -->
-                    </div>
-                </div>
             </div>
-        </section>
-        <!--End Top Bar style3 -->
+        </div>
+    </div>
+</section>
+<!--End Top Bar style3 -->
 
 <!--Start Mainmenu Style3 Area-->
 <header class="mainmenu-style3-area stricky">
@@ -44,42 +42,64 @@
             <nav class="main-menu style3 clearfix float-left">
                 <div class="navbar-header clearfix">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <img src="{{url('frontend/images/logo.jpg')}}" class="web-logo" alt="Awesome Logo">
+                <img src="{{ url('frontend/images/logo.jpg') }}" class="web-logo" alt="Awesome Logo">
                 <div class="navbar-collapse collapse clearfix">
                     <ul class="navigation clearfix">
 
-                  
-                        <li class="dropdown current"><a href="{{url('/')}}">Home</a>
-                            
+
+                        <li class="dropdown current"><a href="{{ route('index') }}">Home</a>
+
                         </li>
-                        <li class="dropdown"><a href="{{url('/about')}}">How it works</a>
+                        <li class="dropdown"><a href="{{ route('about') }}">How it works</a>
                             <ul>
-                                <li><a href="{{url('/about')}}">About Company</a></li>
-                                <!-- <li><a href="faq.php">FAQ’s</a></li> -->
+                                <li><a href="{{ route('about') }}">About Company</a></li>
+
+
+
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="{{url('/services')}}">Services</a>
-                        <ul>
-                            @php
-                                $categories=DB::table('categories')->get();
-                            @endphp
-                            @foreach ($categories as $category )
-                            <li><a href="{{ route('services.category',$category->id) }}">{{ $category->name}}</a></li>
-                            @endforeach
-                             
+                        <li class="dropdown"><a href="{{ route('services') }}">Services</a>
+                            <ul>
+                                @php
+                                    $categories = DB::table('categories')->get();
+                                @endphp
+                                @foreach ($categories as $category)
+                                    <li><a
+                                            href="{{ route('services.category', $category->id) }}">{{ $category->name }}</a>
+                                    </li>
+                                @endforeach
+
                             </ul>
-                    </li>
+                        </li>
 
-                        <li><a href="{{url('/offering')}}">Offering</a></li>
+                        <li><a href="{{ route('offering') }}">Offering</a></li>
 
-                        <li><a href="{{url('/contact')}}">Contact</a></li>
-                        <li><a href="#loginModal3" data-toggle="modal">Login / Signup</a></li>
-                        
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
+                        @auth
+
+                            <li class="dropdown"><a class="rounded-circle border p-3 mt-3 " href="{{ url('about') }}"> <i class="fas fa-user-check"></i> </a>
+                                <ul>
+                                    <li><a href="{{ route('profile') }}"> Profile </a></li>
+                                    <li> <a href="#">
+                                            <form action="{{ route('logout') }}" method="POST" >
+                                                @csrf
+                                                <button type="submit">Logout</button>
+                                            </form>
+                                        </a> </li>
+
+                                    <!-- <li><a href="faq.php">FAQ’s</a></li> -->
+                                </ul>
+                            </li>
+                        @else
+                            <li><a href="#loginModal3" data-toggle="modal">Login / Signup</a></li>
+
+                        @endauth
+
 
 
                     </ul>
@@ -97,4 +117,3 @@
 
 
 @include('include.login')
-

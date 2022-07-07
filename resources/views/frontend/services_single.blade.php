@@ -11,13 +11,12 @@
                         <div class="inner-content-box clearfix">
                             <div class="title-s2 text-center">
                                 <span>Our Services</span>
-                                <h1>{{ $data->log_title }}</h1>
+                                <h1>Bringing Great Design</h1>
                             </div>
                             <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">
-                                    <li><a href="{{ route('index') }}">Home</a></li>
-                                    <li class=""  ><a href="{{route('services')}}">Services</a></li>
-                                    <li class="active">{{ $data->log_title }}</li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li class="active">Services</li>
                                 </ul>
                             </div>
                         </div>
@@ -119,12 +118,48 @@
                         </div>
                     </div>
 
+                    @php
+                        $service_image = DB::table('service_images')
+                            ->where('service_id', $data->id)
+                            ->get();
+                    @endphp
 
                     <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
                         <div class="single-service-top">
                             <div class="single-service-image-box">
-                                <img src="{{ url('frontend/images/services/service-single/single-service-1.jpg') }}"
-                                    alt="Awesome Image">
+                                <section>
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                                            </li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100 h-410"
+                                                src="{{ env('APP_URL2') . '/services/' . $service_image[0]->name }} "
+                                                    alt="First slide">
+                                            </div>
+                                            @foreach ($service_image as $img)
+                                                <div class="carousel-item">
+                                                    <img  class="d-block h-410 w-100" src="{{ env('APP_URL2') . '/services/' . $img->name }} "
+                                                        alt="Second slide">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                            data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                            data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </section>
                             </div>
                             <div class="text">
                                 <h2>{{ $data->log_title }}</h2>
@@ -246,9 +281,9 @@
                 <div class="row">
 
                     <div class="col-xl-6 col-lg-6 col-md-6">
-                        {{-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/phWNqyfCgzI"
-                            frameborder="0"></iframe> --}}
-                        <div class="video-holder-box">
+                        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/phWNqyfCgzI"
+                            frameborder="0"></iframe>
+                        {{-- <div class="video-holder-box">
                             <div class="img-holder">
                                 <img src="{{ url('frontend/images/projects/project-single/video-gallery-1.jpg') }}"
                                     alt="Awesome Image">
@@ -257,18 +292,20 @@
                                         <div class="inner text-center">
                                             <a class="html5lightbox wow zoomIn" data-wow-delay="300ms"
                                                 data-wow-duration="1500ms" title="crystalo Video Gallery"
-                                                href="https://www.google.com/maps/embed?pb=!4v1657094513323!6m8!1m7!1sCAoSLEFGMVFpcE5SNWxBeEZ1Wks4Y0tiSFVQd2lvT01oVTl5VWRwa3BFbTdiSDVj!2m2!1d22.809599581886!2d86.264062143551!3f5.756259200548051!4f-2.567866406612154!5f0.4208950252574051">
+                                                href="{{ $data->youtube }}">
                                                 <span class="flaticon-play-button"></span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> --}}
+                        {{-- </div> --}}
                     </div>
-
                     <div class="col-xl-6 col-lg-6 col-md-6">
-                        <div class="video-holder-box">
+
+                        <iframe width="100%" height="500px" src="{{$data->view360}}"
+                            frameborder="0"></iframe>
+                        {{-- <div class="video-holder-box">
                             <div class="img-holder">
                                 <img src="{{ url('frontend/images/projects/project-single/video-gallery-1.jpg') }}"
                                     alt="Awesome Image">
@@ -277,14 +314,14 @@
                                         <div class="inner text-center">
                                             <a class="html5lightbox wow zoomIn" data-wow-delay="300ms"
                                                 data-wow-duration="1500ms" title="crystalo Video Gallery"
-                                                href="https://www.google.com/maps/embed?pb=!4v1657094513323!6m8!1m7!1sCAoSLEFGMVFpcE5SNWxBeEZ1Wks4Y0tiSFVQd2lvT01oVTl5VWRwa3BFbTdiSDVj!2m2!1d22.809599581886!2d86.264062143551!3f5.756259200548051!4f-2.567866406612154!5f0.4208950252574051">
+                                                href="{{$data->view360}}">
                                                 <span class="flaticon-play-button"></span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -294,67 +331,54 @@
         </section>
         <!--End Video Image Gallery Area-->
 
-        <!--Start Similar projects Area-->
-        {{-- <section class="recently-project-area">
+        <!--Start Recently Project Area-->
+        <section class="recently-project-area">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="sec-title float-left">
-                            <p>Projects</p>
-                            <div class="title">Recently Completed <span>Works</span></div>
+                        <div class="sec-title mb-3 ">
+
+                            <div class="title text-center"> Similer <span> Projects</span></div>
                         </div>
-                        <div class="more-project-button float-right">
-                            <a class="btn-two" href="#">More Projects<span class="flaticon-next"></span></a>
-                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="project-carousel owl-carousel owl-theme owl-loaded owl-drag">
-
-
-                    <div class="owl-stage-outer">
-                        <div class="owl-stage"
-                            style="transform: translate3d(-2950px, 0px, 0px); transition: all 0.7s ease 0s; width: 8315px;">
-                          
-                        @foreach ($services as $item)
-                            
-                 
-                            <div class="owl-item cloned" style="width: 258.2px; margin-right: 10px;">
-                                <div class="single-project-style1">
-                                    <div class="img-holder">
-                                        <img src="{{ 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png '}}" alt="Awesome Image">
-                                        <div class="overlay-content">
-                                            <div class="inner-content">
-                                                <div class="link-box">
-                                                    <a class="btn-one" href="#">Case Study<span
-                                                            class="flaticon-next"></span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="title-box">
-                                            <span>Modern Design</span>
-                                            <h3>Office Partition Walls</h3>
+                <div class="project-carousel owl-carousel owl-theme">
+                    <!--Start single project style1-->
+                    @foreach ($services as $service)
+                        <div class="single-project-style1">
+                            <div class="img-holder">
+                                @php
+                                    $service_image = DB::table('service_images')
+                                        ->where('service_id', $service->id)
+                                        ->first();
+                                @endphp
+                                <img class="h-230" src="{{ env('APP_URL2') . '/services/' . $service_image->name }}"
+                                    alt="Awesome Image">
+                                <div class="overlay-content">
+                                    <div class="inner-content">
+                                        <div class="link-box">
+                                            <a class="btn-one"
+                                                href="{{ route('services.single', $service->id) }}">Details<span
+                                                    class="flaticon-next"></span></a>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="title-box">
+                                    {{-- <span> {{ Str::substr($service->log_description, 0, 20) }}..    </span> --}}
+                                    <h3> {{ $service->log_title }} </h3>
+                                </div>
                             </div>
-                            @endforeach
-                         
                         </div>
-                    </div>
-                    <div class="owl-nav disabled">
-                        <div class="owl-prev"><i class="fa fa-angle-left"></i></div>
-                        <div class="owl-next"><i class="fa fa-angle-right"></i></div>
-                    </div>
-                    <div class="owl-dots">
-                        <div class="owl-dot active"><span></span></div>
-                        <div class="owl-dot"><span></span></div>
-                        <div class="owl-dot"><span></span></div>
-                    </div>
+                    @endforeach
+                    <!--Start single project style1-->
+
                 </div>
             </div>
-        </section> --}}
+        </section>
+        <!--End Recently Project Area-->
 
 
 
