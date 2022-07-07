@@ -11,10 +11,10 @@
             </div>
             <div class="top-style2-right">
                 <ul class="topbar-social-links">
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-skype" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
                 <!-- <div class="language-switcher">
                             <div id="polyglotLanguageSwitcher">

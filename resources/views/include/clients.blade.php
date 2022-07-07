@@ -1,5 +1,5 @@
 @php
-    $clients = DB::table('clients')->get();
+    $clients = DB::table('clients')->where('status',1)->get();
 @endphp
 {{-- <link ref="{{url('frontend/css/work-process.css')}}"> --}}
 <!--Start Latest Projects Area-->

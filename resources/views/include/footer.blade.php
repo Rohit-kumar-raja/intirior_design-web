@@ -93,16 +93,16 @@
                         <span>We are On:</span>
                         <ul class="sociallinks-style-one">
                             <li class="wow slideInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
                             </li>
                             <li class="wow slideInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                             </li>
                             <li class="wow slideInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fab fa-skype" aria-hidden="true"></i></a>
                             </li>
                             <li class="wow slideInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </div>

@@ -17,7 +17,6 @@ class ContactController extends Controller
     }
     public function contact(Request $request)
     {
-
         try {
             Contactus::insertGetId($request->except(['_token']));
             return redirect()->back()->with('success', 'Your Request Successfully sent we are connect you soon');
