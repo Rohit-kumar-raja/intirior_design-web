@@ -13,7 +13,7 @@
                             </div>
                             <div class="breadcrumb-menu float-right">
                                 <ul class="clearfix">
-                                    <li><a href="index.php">Home</a></li>
+                                    <li><a href="{{ route('index') }}">Home</a></li>
                                     <li class="active">About</li>
                                 </ul>
                             </div>

@@ -9,7 +9,7 @@
                         <div class="inner-content-box clearfix">
                             <div class="title-s2 text-center">
                                 <span>Our Services</span>
-                                <h1>Bringing Great Design</h1>
+                                <h1>{{ DB::table('categories')->find($cateigory_id)->name }}</h1>
                             </div>
                             <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">
@@ -27,13 +27,13 @@
 
       
         <!--Start services style2 Service Page-->
-        <section class="services-style2-service-page " style="background: #f7f8f3">
+        <section class="services-style2-service-page " style="background: #f3f3f3">
             <div class="container ">
                 <div class="row ">
-                    <div class="col-xl-5">
+                    <div class="col-xl-12 text-center">
                         <div class="sec-title">
-                            <p class="mt-4">Services</p>
-                            <div class="title">Working <span>Sectors</span></div>
+                            <p class="mt-4">Our Services</p>
+                            <div class="title"> Best  <span> Design</span></div>
                         </div>
                     </div>
 
@@ -50,8 +50,8 @@
                                 </div>
                                 <div class="text-holder p-2">
 
-                                    <h4>{{ $data->log_title }}</h4>
-                                    <div class="text">
+                                    <h3 class="text-center" >{{ $data->log_title }}</h3>
+                                    <div class="text text-center">
                                         <p> {{ substr($data->log_description, 0, 100) }} <a href="{{ route('services.single',$data->slug) }}">more</a> </p>
                                     </div>
                                 </div>

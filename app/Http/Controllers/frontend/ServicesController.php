@@ -19,6 +19,6 @@ class ServicesController extends Controller
     {
        $category = Category::where('status','1')->get();
        $service=Service::where('status','1')->where('category',$id)->paginate(20);
-       return view('frontend.services',['cat'=>$category,'services'=>$service]); 
+       return view('frontend.services',['cat'=>$category,'services'=>$service,'cateigory_id'=>$id]); 
     }
 }
