@@ -9,7 +9,7 @@
                         <div class="inner-content-box clearfix">
                             <div class="title-s2 text-center">
                                 <span>Our Services</span>
-                                <h1>{{ DB::table('categories')->find($cateigory_id)->name }}</h1>
+                                <h1>{{ DB::table('categories')->find($cateigory_id ?? '')->name ?? '' }}</h1>
                             </div>
                             <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">

@@ -82,7 +82,7 @@
                         <li><a href="{{ route('contact') }}">Contact</a></li>
                         @auth
 
-                            <li class="dropdown"><a class="rounded-circle border p-3 mt-3 " href="{{ url('about') }}"> <i class="fas fa-user-check"></i> </a>
+                            <li class="dropdown"><a class="rounded-circle border p-3 mt-3 " href="#"> <i class="fas fa-user-check"></i> </a>
                                 <ul>
                                     <li><a href="{{ route('profile') }}"> Profile </a></li>
                                     <li> <a href="#">
@@ -97,7 +97,6 @@
                             </li>
                         @else
                             <li><a href="#loginModal3" data-toggle="modal">Login / Signup</a></li>
-
                         @endauth
 
 

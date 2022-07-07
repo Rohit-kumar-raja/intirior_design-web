@@ -36,21 +36,15 @@
                                                 <img class="profile_img"
                                                     src="{{ url('frontend/images/testimonial/user.png') }}"
                                                     alt="student dp">
-                                                <h3>{{$users[0]->name}}</h3>
+                                                <h3>{{$users->name}}</h3>
                                             </div>
                                             <div class="card-body">
-                                                {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                    commodo consequat.</p> --}}
+                           
                                                 <div class="text-center">
-                                                    {{-- <button type="button" class="btn-pro">Edit Profile</button> --}}
                                                     <a href="" class="btn btn-pro mt-2">Edit Profile</a>
                                                     <a href="" class="btn btn-pro mt-4">Change Password</a>
                                                 </div>
-                                                {{-- <p class="mb-0"><strong class="pr-1">User ID:</strong>3210</p>
-                    <p class="mb-0"><strong class="pr-1">Phone:</strong>8781243524</p>
-                    <p class="mb-0"><strong class="pr-1">Email:</strong>user@gmail.com</p> --}}
+                                
                                             </div>
                                         </div>
                                     </div>
@@ -66,17 +60,17 @@
                                                             <tr>
                                                                 <th width="30%">Phone No</th>
                                                                 <td width="2%">:</td>
-                                                                <td>{{$users[0]->phone}}</td>
+                                                                <td>{{$users->phone}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">Email Id</th>
                                                                 <td width="2%">:</td>
-                                                                <td>{{$users[0]->email}}</td>
+                                                                <td>{{$users->email}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">Address</th>
                                                                 <td width="2%">:</td>
-                                                                <td>{{$users[0]->address}}</td>
+                                                                <td>{{$users->address}}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -85,17 +79,17 @@
                                                             <tr>
                                                                 <th width="30%">Address</th>
                                                                 <td width="2%">:</td>
-                                                                <td>{{$users[0]->address}}</td>
+                                                                <td>{{$users->address}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">City</th>
                                                                 <td width="2%">:</td>
-                                                                <td>{{$users[0]->city}}</td>
+                                                                <td>{{$users->city}}</td>
                                                             </tr>
                                                             <tr>
                                                                 <th width="30%">State</th>
                                                                 <td width="2%">:</td>
-                                                                <td>{{$users[0]->state}}</td>
+                                                                <td>{{$users->state}}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -111,7 +105,6 @@
 
                                                 {{-- slider start here --}}
                                                 <div class="container">
-
                                                     <div class="row">
                                                         <div class="entry col-sm-3">
                                                             <p class="name">John Doe</p>

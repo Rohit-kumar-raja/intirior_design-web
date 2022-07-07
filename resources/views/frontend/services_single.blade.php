@@ -15,8 +15,9 @@
                             </div>
                             <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">
-                                    <li><a href="index.php">Home</a></li>
-                                    <li class="active">Services</li>
+                                    <li><a href="{{ route('index') }}">Home</a></li>
+                                    <li  class="active"> <a href="{{ route('services') }}">Services</a> </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -104,13 +105,24 @@
                                         <span>Email: <a href="mailto:{{ $info->email }}"> {{ $info->email }} </a>
                                         </span>
                                     </div>
+
+                                   
                                     <div class="button">
-                                        <a class="btn-one wow slideInUp animated" data-wow-delay="0ms"
-                                            data-wow-duration="1500ms" href="{{ url('/contact') }}"
-                                            style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: slideInUp;">Make
-                                            Appointment
-                                            <span class="flaticon-next"></span>
-                                        </a>
+                                        @auth
+                                            <a href="#loginModal2" data-toggle="modal" class="btn-one wow slideInUp animated"
+                                                data-wow-delay="0ms" data-wow-duration="1500ms" href="{{ url('/contact') }}"
+                                                style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: slideInUp;">Make
+                                                Appointment
+                                                <span class="flaticon-next"></span>
+                                            </a>
+                                        @else
+                                            <a href="#loginModal3" data-toggle="modal" class="btn-one wow slideInUp animated"
+                                                data-wow-delay="0ms" data-wow-duration="1500ms" href="{{ url('/contact') }}"
+                                                style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: slideInUp;">Make
+                                                Appointment
+                                                <span class="flaticon-next"></span>
+                                            </a>
+                                        @endauth
                                     </div>
                                 </div>
                             </div>
@@ -138,12 +150,13 @@
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img class="d-block w-100 h-410"
-                                                src="{{ env('APP_URL2') . '/services/' . $service_image[0]->name }} "
+                                                    src="{{ env('APP_URL2') . '/services/' . $service_image[0]->name }} "
                                                     alt="First slide">
                                             </div>
                                             @foreach ($service_image as $img)
                                                 <div class="carousel-item">
-                                                    <img  class="d-block h-410 w-100" src="{{ env('APP_URL2') . '/services/' . $img->name }} "
+                                                    <img class="d-block h-410 w-100"
+                                                        src="{{ env('APP_URL2') . '/services/' . $img->name }} "
                                                         alt="Second slide">
                                                 </div>
                                             @endforeach
@@ -303,8 +316,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6">
 
-                        <iframe width="100%" height="500px" src="{{$data->view360}}"
-                            frameborder="0"></iframe>
+                        <iframe width="100%" height="500px" src="{{ $data->view360 }}" frameborder="0"></iframe>
                         {{-- <div class="video-holder-box">
                             <div class="img-holder">
                                 <img src="{{ url('frontend/images/projects/project-single/video-gallery-1.jpg') }}"
@@ -391,3 +403,4 @@
         </style>
     @endslot
 </x-layout>
+@include('include.service_request')
