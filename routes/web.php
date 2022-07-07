@@ -27,12 +27,18 @@ use App\Http\Controllers\frontend\ProfileController;
 //     return view('welcome');
 // });
 
-Route::get('/',[HomeController::class,'index'])->name('index');
-Route::get('about',[AboutController::class,'index'])->name('about');
-Route::get('contact',[ContactController::class,'index'])->name('contact');
-Route::get('services',[ServicesController::class,'index'])->name('services');
-Route::get('services/{id}',[ServicesController::class,'indexByCategory'])->name('services.category');
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('about', [AboutController::class, 'index'])->name('about');
+Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::get('services', [ServicesController::class, 'index'])->name('services');
+Route::get('services/{id}', [ServicesController::class, 'indexByCategory'])->name('services.category');
 
-Route::get('services/single/{slug}',[ServicessingleController::class,'index'])->name('services.single');
-Route::get('offering',[OfferingController::class,'index'])->name('offering');
-Route::get('profile',[ProfileController::class,'index'])->name('profile');
+Route::get('services/single/{slug}', [ServicessingleController::class, 'index'])->name('services.single');
+Route::get('offering', [OfferingController::class, 'index'])->name('offering');
+Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
