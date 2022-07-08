@@ -1,20 +1,48 @@
 {{-- <div class="preloader"></div> --}}
-
+@php
+$contact=DB::table('site_infos')->first();
+@endphp
 <!-- Start Top Bar style3 -->
 <section class="topbar-style3-area">
     <div class="container clearfix">
         <div class="topbar-style3-content">
             <div class="topbar-style3-left">
-                <ul class="clearfix">
-                    <li>Togo Team Inspiring Interiors </li>
+                <ul class="clearfix wow slideInDown">
+                    <li class="text-white" > <i class="fas fa-envelope" aria-hidden="true"></i>  <a class="text-white" href="mailto:{{ $contact->email }} ">{{ $contact->email }} </a>  </li>
+                    <li> <i class="fas fa-phone    "></i>  <a class="text-white" href="tel:{{ $contact->phone }} ">{{ $contact->phone }} </a> ,  <a class="text-white" href="tel:{{ $contact->phone2 }} ">{{ $contact->phone2 }} </a>  </li>
+
                 </ul>
             </div>
             <div class="top-style2-right">
-                <ul class="topbar-social-links">
-                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-skype" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+         
+                <ul class="topbar-social-links wow slideInUp">
+                
+                    @if ($contact->facebook ?? ''!='')
+                    <li><a href="{{$contact->facebook}}"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+
+                    @endif
+
+                    @if ($contact->whatsapp ?? ''!='')
+                    <li><a href="{{$contact->whatsapp}}"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+
+                    @endif
+
+                    @if ($contact->twitter ?? '' !='')
+                    <li><a href="{{$contact->twitter}}"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+
+                    @endif
+
+                    @if ($contact->instagram ?? ''!='')
+                    <li><a href="{{$contact->instagram}}"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+
+                    @endif
+
+                    @if ($contact->youtube ?? ''!='')
+                    <li><a href="{{$contact->youtube}}"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    @endif
+
+             
+           
                 </ul>
                 <!-- <div class="language-switcher">
                             <div id="polyglotLanguageSwitcher">
