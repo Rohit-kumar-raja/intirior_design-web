@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+
 class ProfileController extends Controller
 {
     public function index()
@@ -44,14 +45,17 @@ class ProfileController extends Controller
         if ($request->new_password == $request->repeat_password) {
             try {
                 $request->validate([
-                    'old_password' => ['required', Rules\Password::defaults(),'minlenth'],
+                    'old_password' => 'required|string|min:8',
                 ]);
                 $user = AllUsers::where('id', Auth::user()->id)->first();
                 $result =  Hash::check($request->old_password, $user->password);
-                dd($result);
 
-                $user = AllUsers::where('id', Auth::user()->id)->update($request->except('_token', 'images'));
-                return redirect()->back()->with('success', 'Your Password Successfully Updated');
+                if ($result == true) {
+                    $user = AllUsers::where('id', Auth::user()->id)->update(['password' => Hash::make($request->new_password)]);
+                    return redirect()->back()->with('success', 'Your Password Successfully Updated');
+                } else {
+                    return redirect()->back()->with('error', 'Password not mached with our records');
+                }
             } catch (Exception $e) {
                 return redirect()->back()->with('error', $e->getMessage());
             }

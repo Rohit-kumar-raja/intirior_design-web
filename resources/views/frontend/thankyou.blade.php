@@ -6,9 +6,8 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="error-content text-center">
-                            <span> Internal Server Error</span>
-                            <div class="title">500</div>
-                            <p>We’re unable to find a page you are looking for, Try later or click the button.</p>
+                            <div class="title">Thank You</div>
+                            <p>  Thank You for your Valuable feedback !!! </p>
                             <div class="button">
                                 <a class="btn-one" href="{{ route('index') }}">Back to Home</a>
                             </div>

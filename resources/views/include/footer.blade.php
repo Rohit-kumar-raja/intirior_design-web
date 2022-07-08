@@ -8,7 +8,7 @@
                             <h3>Your dream kitchen is just a click away</h3>
                         </div>
                         <div class="button float-right">
-                            <a class="btn-one" href="#">Get started<span class="flaticon-next"></span></a>
+                            <a class="btn-one" href="{{ route('services')}}">Get started<span class="flaticon-next"></span></a>
                         </div>
                     </div>
                 </div>

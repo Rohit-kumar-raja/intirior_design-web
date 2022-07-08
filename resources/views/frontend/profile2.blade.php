@@ -29,16 +29,16 @@
                                                     @csrf
                                                     <div class="row">
                                                         <div class="col-sm-12">
-                                                            <input placeholder="Enter Old Passsword" name="old_password"
+                                                            <input required placeholder="Enter Old Passsword" name="old_password"
                                                                 type="text" class="form-control rounded-pill">
-                                                            <input placeholder="Enter new Passsword" name="new_password"
+                                                            <input required placeholder="Enter new Passsword" name="new_password"
                                                                 type="text" class="form-control rounded-pill">
-                                                            <input placeholder="Repeat Passsword" name="repeat_password"
+                                                            <input required placeholder="Repeat Passsword" name="repeat_password"
                                                                 type="text" class="form-control rounded-pill">
                                                         </div>
                                                     </div>
                                                     <br>
-                                                    <button class=" rounded-pill btn btn-danger"> Change Password </button>
+                                                    <button class="rounded-pill btn btn-danger"> <i class="fas fa-lock-open"></i> Change Password </button>
                                                 </form>
                                                 <br>
                                                 <br>
@@ -131,10 +131,11 @@
                                                             ->where('service_id', $taken_service->id ?? '')
                                                             ->first();
                                                     @endphp
-                                                    <div class="col-sm-3 single-project-style3 ">
+                                                    <div class="col-sm-3  wow fadeInUp  ">
                                                         <a href="{{ route('services.single', $taken_service->slug) }}">
                                                             <img src="{{ env('APP_URL2') . '/services/' . $service_image->name }}"
                                                                 alt="Smiling person" class="img-fluid  border-2 h-150" />
+                                      
                                                             <p class=" text-center border text-white bg-primary">
                                                                 {{ $taken_service->log_title }}
                                                             </p>

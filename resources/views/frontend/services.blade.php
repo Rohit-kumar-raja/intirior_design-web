@@ -21,11 +21,11 @@
                     </div>
                 </div>
             </div>
-           
+
         </section>
         <!--End breadcrumb area-->
 
-      
+
         <!--Start services style2 Service Page-->
         <section class="services-style2-service-page " style="background: #f3f3f3">
             <div class="container ">
@@ -33,43 +33,51 @@
                     <div class="col-xl-12 text-center">
                         <div class="sec-title">
                             <p class="mt-4">Our Services</p>
-                            <div class="title"> Best  <span> Design</span></div>
+                            <div class="title"> Best <span> Design</span></div>
                         </div>
                     </div>
 
                 </div>
                 <div class="row mt-3">
                     @foreach ($services as $data)
+                        @php
+                            $img = DB::table('service_images')
+                                ->where('service_id', $data->id)
+                                ->first();
+                        @endphp
                         <!--Start single service style2-->
                         <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12  ">
                             <div class="single-service-style2 wow fadeInUp border card" data-wow-delay="0ms"
                                 data-wow-duration="1200ms">
                                 <div class="img-holder">
-                                    <img src="{{ url('frontend/images/services/v2-1.jpg') }}" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
+                                    <img class="h-230" src="{{ env('APP_URL2') . '/services/' . $img->name }}" alt="Awesome Image">
+                                    <div class="overlay-style-two">
+           
+                                    </div>
                                 </div>
                                 <div class="text-holder p-2">
 
-                                    <h3 class="text-center" >{{ $data->log_title }}</h3>
+                                    <h3 class="text-center">{{ $data->log_title }}</h3>
                                     <div class="text text-center">
-                                        <p> {{ substr($data->log_description, 0, 100) }} <a href="{{ route('services.single',$data->slug) }}">more</a> </p>
+                                        <p> {{ substr($data->log_description, 0, 100) }} <a
+                                                href="{{ route('services.single', $data->slug) }}">more</a> </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--End single service style2-->
                     @endforeach
-               
+
                 </div>
                 <div class="p-2 text-center">
                     {{ $services->links() }}
                 </div>
             </div>
-         
+
         </section>
-       
+
         <!--End services style2 Service Page-->
-  {{-- category1 section starts here --}}
+        {{-- category1 section starts here --}}
         <!--Start Recently Project style2 Area-->
         <section class="recently-project-style2-area">
             <div class="container">
@@ -87,7 +95,8 @@
                                         <img src="{{ env('APP_URL2') . '/category/' . $category->images }}"
                                             alt="Awesome Image">
                                         <div class="read-more">
-                                            <a href="{{ route('services.category',$category->id) }}"><span class="icon-next"></span></a>
+                                            <a href="{{ route('services.category', $category->id) }}"><span
+                                                    class="icon-next"></span></a>
                                         </div>
                                         <div class="title-box">
                                             {{-- <span>Modern Design</span> --}}
@@ -261,8 +270,7 @@
                 </div>
                 <div class="row">
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="100ms"
-                        data-wow-duration="1500ms"
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="100ms" data-wow-duration="1500ms"
                         style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>01</span></div>
@@ -277,8 +285,7 @@
                     </div>
                     <!--End Single Working Process-->
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="300ms"
-                        data-wow-duration="1500ms"
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms"
                         style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>02</span></div>
@@ -293,8 +300,7 @@
                     </div>
                     <!--End Single Working Process-->
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
-                        data-wow-duration="1500ms"
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms"
                         style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>03</span></div>
@@ -310,8 +316,7 @@
                     <!--End Single Working Process-->
 
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
-                        data-wow-duration="1500ms"
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms"
                         style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>04</span></div>
@@ -327,8 +332,7 @@
                     <!--End Single Working Process-->
 
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
-                        data-wow-duration="1500ms"
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms"
                         style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>05</span></div>
@@ -344,8 +348,7 @@
                     <!--End Single Working Process-->
 
                     <!--Start Single Working Process-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms"
-                        data-wow-duration="1500ms"
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="500ms" data-wow-duration="1500ms"
                         style="visibility: visible; animation-duration: 1500ms; animation-delay: 500ms; animation-name: fadeInUp;">
                         <div class="single-working-process text-center">
                             <div class="top-box"><span>06</span></div>

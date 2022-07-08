@@ -47,20 +47,15 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                <img src="{{ url('frontend/images/logo.jpg') }}" class="web-logo" alt="Awesome Logo">
+                <a href="{{ route('index') }}"> <img src="{{ url('frontend/images/logo.jpg') }}" class="web-logo" alt="Awesome Logo">
+                </a>
                 <div class="navbar-collapse collapse clearfix">
                     <ul class="navigation clearfix">
-
-
                         <li class="dropdown current"><a href="{{ route('index') }}">Home</a>
-
                         </li>
                         <li class="dropdown"><a href="{{ route('about') }}">How it works</a>
                             <ul>
                                 <li><a href="{{ route('about') }}">About Company</a></li>
-
-
-
                             </ul>
                         </li>
                         <li class="dropdown"><a href="{{ route('services') }}">Services</a>
