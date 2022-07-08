@@ -75,39 +75,69 @@
                             <div class="shop-page-title">
                                 <div class="title">Send Your Message Here</div>
                             </div>
+
+                            {{-- Message --}}
+                            @if (Session::has('success'))
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                    <strong>Success !</strong> {{ session('success') }}
+                                </div>
+                            @endif
+
+                            @if (Session::has('error'))
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                    <strong>Error !</strong> {{ session('error') }}
+                                </div>
+                            @endif
+                            {{-- end Message --}}
                             <div class="row">
-                                <form action="#">
+                                <form action="{{ route('contact.send') }}" method="POST">
+                                    @csrf
                                     <div class="col-md-12">
                                         <div class="input-field">
-                                            <input type="text" name="name" placeholder="Your Name *">
+                                            <input required type="text" name="name" placeholder="Your Name *">
                                             <div class="icon-holder">
-                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                                <i class="fas fa-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="input-field">
-                                            <input type="text" name="email" placeholder="Enter Mail id *">
+                                            <input required type="text" name="email" placeholder="Enter Mail id *">
                                             <div class="icon-holder">
-                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                <i class="fas fa-envelope" aria-hidden="true"></i>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="input-field">
-                                            <input type="number" name="phone" placeholder="Enter Phone No">
+                                            <input required type="number" name="phone" placeholder="Enter Phone No">
                                             <div class="icon-holder">
-                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                                <i class="fas fa-mobile"></i>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="input-field">
-                                            <textarea id="w3review" name="message" rows="4" cols="50">Enter Message
-                                                 {{-- <i class="fa-regular fa-message" aria-hidden="true"></i> --}}
-                                            </textarea>
+                                            <input required type="text" name="subject" placeholder="Enter Subject ">
+                                            <div class="icon-holder">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="input-field">
+                                            <textarea required id="w3review" placeholder="Enter Message" name="massage" rows="4" cols="50"></textarea>
+
+                                        </div>
+                                    </div>
+                                    <input  type="hidden" name="status" value="1">
+                                    <input  type="hidden" name="created_at" value="{{ date('Y-m-d h:m:s') }}">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-12">

@@ -22,10 +22,13 @@
                 <form action="{{ route('message.send') }}" method="post">
                     @csrf
                     <input type="hidden" name="design_id" value="{{ $data->id }}">
-                    <textarea class="form-control" name="massage" placeholder="Write message here " id="" cols="30"
+                    <input type="hidden" name="created_at" value="{{ date('Y-m-d h:m:s') }}">
+                    <input type="hidden" name="status" value="1">
+
+                    <textarea class="form-control" name="massage" placeholder="Write your  message here " id="" cols="30"
                         rows="10"></textarea>
                     <div class="form-group text-center mt-3">
-                        <button id="signup-button" type="submit" class="text-white btn btn-signin">submit</button>
+                        <button id="signup-button" type="submit" class="text-white btn btn-signin">Send Request</button>
 
                     </div>
                 </form>

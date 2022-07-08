@@ -34,6 +34,10 @@ Route::get('services/{id}', [ServicesController::class, 'indexByCategory'])->nam
 Route::get('services/single/{slug}', [ServicessingleController::class, 'index'])->name('services.single');
 Route::get('offering', [OfferingController::class, 'index'])->name('offering');
 Route::get('profile', [ProfileController::class, 'index'])->middleware(['auth'])->name('profile');
+Route::get('profile/edit', [ProfileController::class, 'edit'])->middleware(['auth'])->name('profile.edit');
+Route::get('profile/update', [ProfileController::class, 'update'])->middleware(['auth'])->name('profile.update');
+
+
 Route::post('message/send', [MessageController::class, 'index'])->middleware(['auth'])->name('message.send');
 
 require __DIR__ . '/auth.php';

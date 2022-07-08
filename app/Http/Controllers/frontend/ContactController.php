@@ -17,11 +17,11 @@ class ContactController extends Controller
     }
     public function contact(Request $request)
     {
-        try {
+       try {
             Contactus::insertGetId($request->except(['_token']));
-            return redirect()->back()->with('success', 'Your Request Successfully sent we are connect you soon');
+            return redirect()->back()->with('success', 'Your  Message Successfully sent we are connect you soon');
         } catch (Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage());
+            return redirect()->back()->with('error',$e->getMessage());
         }
     }
 }

@@ -15,12 +15,13 @@ class MessageController extends Controller
         Messages::insertGetId([
             'user_id' => Auth::user()->id,
             'design_id' => $request->design_id,
-            'massage' => $request->massage
+            'massage' => $request->massage,
+            'status' => $request->status
         ]);
         return redirect()->back()->with('success','Your Request Successfully sent we are connect you soon');
 
        }catch( Exception $e){
-        return redirect()->back()->withErrors($e->getMessage());
+        return redirect()->back()->with('error',$e->getMessage());
        }
     }
 }

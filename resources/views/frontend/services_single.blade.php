@@ -16,7 +16,7 @@
                             <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">
                                     <li><a href="{{ route('index') }}">Home</a></li>
-                                    <li  class="active"> <a href="{{ route('services') }}">Services</a> </li>
+                                    <li class="active"> <a href="{{ route('services') }}">Services</a> </li>
 
                                 </ul>
                             </div>
@@ -35,10 +35,10 @@
                             <!--Start Single sidebar-->
                             <div class="single-sidebar accordion-box">
                                 <!--Start single accordion box-->
-                                @if ($data->title1 != '')
+                                @if ($data->title1 ?? '' != '')
                                     <div class="accordion accordion-block">
                                         <div class="accord-btn  active">
-                                            <span class="hdd">{{ $data->title1 }}</span>
+                                            <span class="hdd">{{ $data->title1 ?? '' }}</span>
                                         </div>
                                         <div class="accord-content collapsed">
                                             <p class="text-justify">{{ $data->description1 }}</p>
@@ -48,7 +48,7 @@
 
                                 <!--End single accordion box-->
                                 <!--Start single accordion box-->
-                                @if ($data->title2 != '')
+                                @if ($data->title2 ?? '' != '')
                                     <div class="accordion accordion-block">
                                         <div class="accord-btn">
                                             <span class="hdd">{{ $data->title2 }}</span>
@@ -58,7 +58,7 @@
                                         </div>
                                     </div>
                                 @endif
-                                @if ($data->title3 != '')
+                                @if ($data->title3 ?? '' != '')
                                     <div class="accordion accordion-block">
                                         <div class="accord-btn">
                                             <span class="hdd">{{ $data->title3 }}</span>
@@ -68,7 +68,7 @@
                                         </div>
                                     </div>
                                 @endif
-                                @if ($data->title4 != '')
+                                @if ($data->title4 ?? '' != '')
                                     <div class="accordion accordion-block">
                                         <div class="accord-btn">
                                             <span class="hdd">{{ $data->title4 }}</span>
@@ -78,7 +78,7 @@
                                         </div>
                                     </div>
                                 @endif
-                                @if ($data->title5 != '')
+                                @if ($data->title5 ?? '' != '')
                                     <div class="accordion accordion-block">
                                         <div class="accord-btn">
                                             <span class="hdd">{{ $data->title5 }}</span>
@@ -106,7 +106,7 @@
                                         </span>
                                     </div>
 
-                                   
+
                                     <div class="button">
                                         @auth
                                             <a href="#loginModal2" data-toggle="modal" class="btn-one wow slideInUp animated"
@@ -137,6 +137,25 @@
                     @endphp
 
                     <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
+                        {{-- Message --}}
+                        @if (Session::has('success'))
+                            <div class="alert alert-success alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                                <strong>Success !</strong> {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if (Session::has('error'))
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                                <strong>Error !</strong> {{ session('error') }}
+                            </div>
+                        @endif
+                        {{-- end Message --}}
                         <div class="single-service-top">
                             <div class="single-service-image-box">
                                 <section>
@@ -292,11 +311,13 @@
         <section class="video-image-holder-area">
             <div class="container-fluid">
                 <div class="row">
+                    @if (strlen($data->youtube) > 30)
+                        <div class="col-xl-6 col-lg-6 col-md-6">
 
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/phWNqyfCgzI"
-                            frameborder="0"></iframe>
-                        {{-- <div class="video-holder-box">
+
+                            <iframe width="100%" height="500px" src="{{ $data->youtube ?? '' }}"
+                                frameborder="0"></iframe>
+                            {{-- <div class="video-holder-box">
                             <div class="img-holder">
                                 <img src="{{ url('frontend/images/projects/project-single/video-gallery-1.jpg') }}"
                                     alt="Awesome Image">
@@ -312,12 +333,14 @@
                                     </div>
                                 </div>
                             </div> --}}
-                        {{-- </div> --}}
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-
-                        <iframe width="100%" height="500px" src="{{ $data->view360 }}" frameborder="0"></iframe>
-                        {{-- <div class="video-holder-box">
+                            {{-- </div> --}}
+                        </div>
+                    @endif
+                    @if (strlen($data->youtube) > 30)
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <iframe width="100%" height="500px" src="{{ $data->view360 ?? '' }}"
+                                frameborder="0"></iframe>
+                            {{-- <div class="video-holder-box">
                             <div class="img-holder">
                                 <img src="{{ url('frontend/images/projects/project-single/video-gallery-1.jpg') }}"
                                     alt="Awesome Image">
@@ -334,8 +357,8 @@
                                 </div>
                             </div>
                         </div> --}}
-                    </div>
-
+                        </div>
+                    @endif
                 </div>
 
             </div>
@@ -373,7 +396,7 @@
                                     <div class="inner-content">
                                         <div class="link-box">
                                             <a class="btn-one"
-                                                href="{{ route('services.single', $service->id) }}">Details<span
+                                                href="{{ route('services.single', $service->slug) }}">Details<span
                                                     class="flaticon-next"></span></a>
                                         </div>
                                     </div>
