@@ -70,6 +70,10 @@
                                                             <input type="file" name="images" class="form-control">
                                                         </div>
 
+                                                        <div class="col-sm-12">
+                                                            <label for=""> Address </label>
+                                                         <textarea class="form-control" placeholder="Write your address" name="address" id="" cols="10" rows="2"></textarea>
+                                                        </div>
 
                                                     </div>
                                                     <button class="btn btn-primary mt-3" > update </button>

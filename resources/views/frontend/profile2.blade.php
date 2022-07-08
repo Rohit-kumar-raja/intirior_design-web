@@ -5,15 +5,14 @@
     @slot('body')
         <section>
             <div class="rt-container ">
-                <div class="col-rt-12 clr br-10">
-                    <div class="Scriptcontent">
+                <div class="col-rt-12 clr  p-5">
                         <!-- Student Profile -->
-                        <div class="student-profile py-4 bg-primary">
+                        <div class=" py-4 bg-primary ">
                             <div class="container ">
                                 <div class="row">
-                                    <div class="col-lg-4 clr mt-3">
+                                    <div class="col-lg-4 clr mt-3 rounded-circle ">
                                         <div class="card shadow-sm shd">
-                                            <div class="card-header bg-transparent text-center">
+                                            <div class="card-header bg-transparent text-center ">
                                                 <img class="profile_img"
                                                     src="{{ url('frontend/images/testimonial/user.png') }}"
                                                     alt="student dp">
@@ -28,6 +27,9 @@
                                                             class="fas fa-unlock-alt"></i> Change Password</a>
                                                 </div>
                                             </div>
+                                            <br>
+                                            <br><br><br><br>
+                                            <br><br>
                                         </div>
                                     </div>
                                     <div class="col-lg-8 clr mt-3">
@@ -113,8 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- partial -->
-                    </div>
+             
                 </div>
             </div>
         </section>
