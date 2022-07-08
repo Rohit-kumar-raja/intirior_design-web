@@ -8,7 +8,8 @@ use App\Models\Messages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Exception;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
 class ProfileController extends Controller
 {
     public function index()
@@ -26,22 +27,36 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
-
         try {
             $user = AllUsers::where('id', Auth::user()->id)->update($request->except('_token', 'images'));
-            return redirect()->back()->with('success', 'Your Request Successfully sent we are connect you soon');
+
+            if ($request->file('images')) {
+                $this->update_images('all_users', Auth::user()->id, $request->file('images'), 'profile', 'images');
+            }
+            return redirect()->back()->with('success', 'Your Profile Successfully Updated');
         } catch (Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
         }
     }
 
-    public function passwordChange(Request $request)
+    public function passwordUpdate(Request $request)
     {
-        try {
-            $user = AllUsers::where('id', Auth::user()->id)->update($request->except('_token', 'images'));
-            return redirect()->back()->with('success', 'Your Request Successfully sent we are connect you soon');
-        } catch (Exception $e) {
-            return redirect()->back()->with('error', $e->getMessage());
+        if ($request->new_password == $request->repeat_password) {
+            try {
+                $request->validate([
+                    'old_password' => ['required', Rules\Password::defaults(),'minlenth'],
+                ]);
+                $user = AllUsers::where('id', Auth::user()->id)->first();
+                $result =  Hash::check($request->old_password, $user->password);
+                dd($result);
+
+                $user = AllUsers::where('id', Auth::user()->id)->update($request->except('_token', 'images'));
+                return redirect()->back()->with('success', 'Your Password Successfully Updated');
+            } catch (Exception $e) {
+                return redirect()->back()->with('error', $e->getMessage());
+            }
+        } else {
+            return redirect()->back()->with('error', 'New and Repeat password  Not matched');
         }
     }
 }

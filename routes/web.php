@@ -36,6 +36,7 @@ Route::get('offering', [OfferingController::class, 'index'])->name('offering');
 Route::get('profile', [ProfileController::class, 'index'])->middleware(['auth'])->name('profile');
 Route::get('profile/edit', [ProfileController::class, 'edit'])->middleware(['auth'])->name('profile.edit');
 Route::post('profile/update', [ProfileController::class, 'update'])->middleware(['auth'])->name('profile.update');
+Route::post('profile/password/update', [ProfileController::class, 'passwordUpdate'])->middleware(['auth'])->name('profile.password.update');
 
 
 Route::post('message/send', [MessageController::class, 'index'])->middleware(['auth'])->name('message.send');
