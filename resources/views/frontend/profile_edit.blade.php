@@ -37,21 +37,22 @@
                                                 </h3>
                                             </div>
                                             <div class="card-body pt-0">
-                                                <form action="">
+                                                <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data" >
+                                                    @csrf
                                                     <div class="row">
                                                         <div class="col-sm-6">
                                                             <label for="">Name</label>
-                                                            <input type="text" class="form-control"
+                                                            <input disabled type="text" class="form-control"
                                                                 value="{{ $users->name }}">
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <label for="">Email</label>
-                                                            <input type="text" name="email" class="form-control"
+                                                            <input type="text" disabled class="form-control"
                                                                 value="{{ $users->email }}">
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <label for="">phone</label>
-                                                            <input type="text" name="phone" class="form-control"
+                                                            <input disabled type="text" disabled name="phone" class="form-control"
                                                                 value="{{ $users->phone }}">
                                                         </div>
                                                         <div class="col-sm-6">
@@ -72,7 +73,7 @@
 
                                                         <div class="col-sm-12">
                                                             <label for=""> Address </label>
-                                                         <textarea class="form-control" placeholder="Write your address" name="address" id="" cols="10" rows="2"></textarea>
+                                                         <textarea class="form-control" placeholder="Write your address" name="address" id="" cols="10" rows="2">{{ $users->address }}</textarea>
                                                         </div>
 
                                                     </div>
