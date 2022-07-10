@@ -1,0 +1,93 @@
+.pd-0
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.shop-page-title-1
+{
+    padding-bottom: 10px;
+    color: #222222;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.img-h
+{
+    height: 400px;
+}
+#blog-area {
+    padding: 40px 0 0px !important;
+}
+
+.np-sp
+{
+    padding-top: 0px !important;
+    position: relative !important;
+}
+
+.imgg
+{
+    transform: scale(1.0);
+    transition: all 20ms ease;
+}
+
+.single-team-member .img-holder .overlay1 {
+    position: absolute !important;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    background: rgb(221 17 17 / 50%);
+    transition: all 900ms ease 100ms;
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: perspective(1200px) rotateX(-90deg) translateZ(-32px);
+}
+
+.cen
+{
+    text-align:center;
+}
+.mg-sz
+{
+    width:80px !important;
+    height:70px !important;
+}
+.p-sz {font-size: 20px!important;}
+
+.ser-img
+{
+    height: 260px;
+}
+
+.pd-5
+{
+    padding-bottom:5px!important;
+    padding-top:20px!important;
+}
+.sp-12
+{
+    width:1200px!important;
+}
+
+.blog-single-image-with-text-box .image-box li img {
+    width: 500px !important;
+    height: 500px !important;
+}
+.single-project-style3 .chng img
+{
+    height: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.latest-projects-area-new .container
+{
+    margin-top: 30px;
+}
+
